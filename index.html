@@ -745,12 +745,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
 /* ======= CONFIGURAÇÃO (edite aqui antes de publicar) ======= */
 const WHATSAPP_NUMBER = "5511976661914";
 
-// CRM E4T (Supabase). A chave abaixo é a "publishable/anon key", feita para
-// ficar exposta no código do site. Ela só consegue fazer o que a função
-// criar_lead_landing_page() permite (inserir um lead), nada além disso.
-// Veja o passo a passo em GUIA-PUBLICACAO.md, seção 6.
-const SUPABASE_URL = "https://qovmvgprtavbklkfvqvl.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_8F3xMR39wkkyHJiwKbC7WA_Ca2-ehL5";
+// CRM E4T (endpoint próprio do CRM, com chave secreta). Essa chave só
+// autoriza criar um lead novo nesse endpoint específico, nada além disso.
+const CRM_LEAD_ENDPOINT = "https://e4tcrm.lovable.app/api/public/leads";
+const CRM_LEAD_API_KEY = "65bbf994d111b4dbba1cd1652f549c15da1efcab537034f02713cd03335606d0";
 
 /* WhatsApp float button base link */
 document.getElementById('waFloat').href = "https://wa.me/" + WHATSAPP_NUMBER.replace(/\D/g,'') + "?text=" + encodeURIComponent("Olá! Vim pela landing page da E4T e quero saber mais sobre gestão de tráfego pago.");
@@ -824,31 +822,30 @@ form.addEventListener('submit', function(e){
   if (typeof fbq === 'function') { fbq('track', 'Lead'); }
   if (typeof gtag === 'function') { gtag('event', 'generate_lead'); }
 
-  // Grava o lead direto no CRM da E4T (Supabase), chamando uma função
-  // controlada (RPC) em vez de escrever na tabela diretamente.
-  // Não bloqueia o redirecionamento pro WhatsApp se falhar.
+  // Grava o lead direto no CRM da E4T, chamando o endpoint público de
+  // criação de leads (protegido por chave secreta). Não bloqueia o
+  // redirecionamento pro WhatsApp se essa chamada falhar.
   const ja_investe_trafego = data.desafio === 'Já fiz tráfego pago e não funcionou';
 
-  const sendToCRM = fetch(SUPABASE_URL + "/rest/v1/rpc/criar_lead_landing_page", {
+  const sendToCRM = fetch(CRM_LEAD_ENDPOINT, {
     method: 'POST',
     headers: {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'X-API-Key': CRM_LEAD_API_KEY
     },
     body: JSON.stringify({
-      p_empresa: data.negocio,
-      p_contato_nome: data.nome,
-      p_telefone: data.whatsapp,
-      p_segmento: data.tipoNegocio,
-      p_cidade: data.cidade,
-      p_dor_principal: data.desafio,
-      p_faixa_investimento: data.investimento,
-      p_ja_investe_trafego: ja_investe_trafego,
-      p_utm_source: data.utm_source,
-      p_utm_medium: data.utm_medium,
-      p_utm_campaign: data.utm_campaign,
-      p_page_url: data.pageUrl
+      empresa: data.negocio,
+      contato_nome: data.nome,
+      telefone: data.whatsapp,
+      segmento: data.tipoNegocio,
+      cidade: data.cidade,
+      dor_principal: data.desafio,
+      faixa_investimento: data.investimento,
+      ja_investe_trafego: ja_investe_trafego,
+      utm_source: data.utm_source,
+      utm_medium: data.utm_medium,
+      utm_campaign: data.utm_campaign,
+      page_url: data.pageUrl
     })
   }).catch(function(){});
 
