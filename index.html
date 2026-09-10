@@ -837,7 +837,15 @@ form.addEventListener('submit', function(e){
 
   // Track conversion events (ative depois de configurar os pixels no passo a passo)
   if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-  if (typeof gtag === 'function') { gtag('event', 'generate_lead'); }
+  if (typeof gtag === 'function') {
+    gtag('event', 'generate_lead');
+    // Conversão do Google Ads: "Enviar formulário de lead"
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18443059592/RUw1CJPom_McEIiDq9pE',
+      'value': 1.0,
+      'currency': 'BRL'
+    });
+  }
 
   // Grava o lead direto no CRM da E4T, chamando o endpoint público de
   // criação de leads (protegido por chave secreta). Não bloqueia o
