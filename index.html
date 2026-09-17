@@ -370,6 +370,28 @@ footer{background:#080808;color:#8a8a8a;padding:56px 0 28px;font-size:13.5px}
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "yg7vca9btj");
 </script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1448130467134895');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1448130467134895&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- OpenAI / ChatGPT Ads Pixel -->
+<script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"SngyKBEsahi4c1RGV1jXbt",debug:true});</script>
+<!-- End OpenAI / ChatGPT Ads Pixel -->
 </head>
 <body>
 
@@ -846,6 +868,10 @@ form.addEventListener('submit', function(e){
       'value': 1.0,
       'currency': 'BRL'
     });
+  }
+  // Conversão do ChatGPT Ads (OpenAI)
+  if (typeof oaiq === 'function') {
+    oaiq('measure', 'registration_completed', { type: 'customer_action' });
   }
 
   // Grava o lead direto no CRM da E4T, chamando o endpoint público de
