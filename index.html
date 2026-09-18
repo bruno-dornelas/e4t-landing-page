@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- E4T CRM tracking (atribuição): precisa rodar cedo e de forma síncrona para capturar os parâmetros da URL de entrada antes de qualquer redirecionamento ou interação -->
+<script src="https://e4tcrm.lovable.app/api/public/track"></script>
 <title>E4T Marketing | Agência especialista em gastronomia desde 2018</title>
 <meta name="description" content="Gestão de tráfego pago para restaurantes, hamburguerias, padarias e negócios de gastronomia. Diagnóstico estratégico gratuito com a E4T Marketing e Publicidade.">
 <meta name="robots" content="index, follow">
@@ -879,27 +881,36 @@ form.addEventListener('submit', function(e){
   // redirecionamento pro WhatsApp se essa chamada falhar.
   const ja_investe_trafego = data.desafio === 'Já fiz tráfego pago e não funcionou';
 
+  // Dados de atribuição (oppref, gclid, gbraid, wbraid, fbclid, UTMs, first/last touch
+  // etc.) capturados e persistidos pelo script do CRM carregado no <head>. Se o script
+  // ainda não tiver carregado por algum motivo, seguimos só com os campos já existentes.
+  const rastreio = (window.E4TTracking && window.E4TTracking.dados()) || {};
+
+  const leadPayload = Object.assign({
+    empresa: data.negocio,
+    contato_nome: data.nome,
+    telefone: data.whatsapp,
+    segmento: data.tipoNegocio,
+    cidade: data.cidade,
+    dor_principal: data.desafio,
+    faixa_investimento: data.investimento,
+    ja_investe_trafego: ja_investe_trafego,
+    utm_source: data.utm_source,
+    utm_medium: data.utm_medium,
+    utm_campaign: data.utm_campaign,
+    page_url: data.pageUrl
+  }, rastreio, {
+    page_url: data.pageUrl
+  });
+
   const sendToCRM = fetch(CRM_LEAD_ENDPOINT, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'X-API-Key': CRM_LEAD_API_KEY
     },
-    body: JSON.stringify({
-      empresa: data.negocio,
-      contato_nome: data.nome,
-      telefone: data.whatsapp,
-      segmento: data.tipoNegocio,
-      cidade: data.cidade,
-      dor_principal: data.desafio,
-      faixa_investimento: data.investimento,
-      ja_investe_trafego: ja_investe_trafego,
-      utm_source: data.utm_source,
-      utm_medium: data.utm_medium,
-      utm_campaign: data.utm_campaign,
-      page_url: data.pageUrl
-    })
-  }).catch(function(){});
+    body: JSON.stringify(leadPayload)
+  }).catch(function(err){ console.error('Erro ao enviar lead para o CRM:', err); });
 
   sendToCRM.finally(function(){
     const msg =
