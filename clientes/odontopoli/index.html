@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<title>Odontopoli Guarulhos</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Clínica odontológica no Centro de Guarulhos. Ortodontia, Invisalign, implantes e estética do sorriso com o Dr. Lucas e a Dra. Camila Hypólito. Agende sua avaliação online.">
+<!-- Durante a aprovação na pasta da E4T, manter noindex. Remover quando subir em odontopoli.com.br -->
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Odontopoli · Odontologia Especializada em Guarulhos">
+<meta property="og:description" content="Escolha o dia e o horário da sua avaliação em menos de 1 minuto.">
+<meta property="og:image" content="https://e4tmkt.com/clientes/odontopoli/img/doutores.jpg">
+<meta property="og:url" content="https://e4tmkt.com/clientes/odontopoli/">
+<meta name="theme-color" content="#1D6A47">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --verde-marca:#99DAA2;   /* verde do logo */
+  --verde:#1D6A47;         /* botões e links: contraste AA sobre branco */
+  --verde-escuro:#14503A;
+  --verde-nevoa:#EDF7EF;   /* fundo de seções */
+  --grafite:#66686C;       /* cinza do logo */
+  --tinta:#23262A;         /* texto principal */
+  --papel:#FFFFFF;
+  --linha:#D9E4DC;
+  --areia:#F4EFE8;         /* tom da madeira da recepção, usado só em detalhe */
+  --alerta:#B3261E;
+  --raio:14px;
+  --sombra:0 10px 30px rgba(20,60,40,.10);
+  --fs-0:1.125rem;   /* 18px corpo */
+  --fs-1:1.3rem;
+  --fs-2:1.65rem;
+  --fs-3:clamp(1.9rem, 5.6vw, 2.9rem);
+  --gutter:clamp(16px, 5vw, 40px);
+  --largura:1120px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:"Lexend",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:var(--fs-0);line-height:1.6;}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--verde)}
+h1,h2,h3{line-height:1.2;text-wrap:balance;margin:0;font-weight:600;letter-spacing:-.01em}
+h2{font-size:var(--fs-2)}
+h3{font-size:var(--fs-1)}
+p{margin:0}
+.wrap{max-width:var(--largura);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-size:.85rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--grafite)}
+:focus-visible{outline:3px solid #F2B705;outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.confirmar{text-decoration:underline dotted #D39B00 2px;text-underline-offset:4px}
+.aprovacao{background:#23262A;color:#E9ECEF;font-size:.85rem;text-align:center;padding:8px 16px;line-height:1.4}
+.aprovacao b{color:var(--verde-marca);font-weight:600}
+.aprovacao .confirmar{color:#fff}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:58px;padding:.8rem 1.5rem;border-radius:999px;border:2px solid transparent;font:inherit;font-weight:600;font-size:1.1rem;text-decoration:none;cursor:pointer;transition:background .2s, transform .1s}
+.btn:active{transform:translateY(1px)}
+.btn-primario{background:var(--verde);color:#fff}
+.btn-primario:hover{background:var(--verde-escuro)}
+.btn-secundario{background:#fff;color:var(--verde);border-color:var(--verde)}
+.btn-secundario:hover{background:var(--verde-nevoa)}
+.btn svg{width:24px;height:24px;flex:none}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+
+/* Topo */
+.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.topo .logo img{width:168px}
+.topo-acoes{display:flex;gap:8px;align-items:center}
+.topo-tel{display:flex;align-items:center;gap:.4rem;text-decoration:none;font-weight:600;color:var(--tinta);font-size:1rem;padding:.5rem .8rem;border-radius:999px;border:1.5px solid var(--linha);min-height:44px}
+.topo-tel svg{width:20px;height:20px;color:var(--verde)}
+.topo .btn{min-height:44px;font-size:.95rem;padding:.4rem 1rem}
+@media (max-width:560px){.topo .logo img{width:138px}.topo-tel span{display:none}.topo .btn{display:none}}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--verde-nevoa),#fff 85%);padding-block:28px 40px;overflow:hidden}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+@media (min-width:880px){.hero .wrap{grid-template-columns:1.05fr .95fr;gap:56px}.hero{padding-block:56px 64px}}
+.hero h1{font-size:var(--fs-3);margin-top:10px}
+.hero h1 em{font-style:normal;color:var(--verde)}
+.hero .sub{margin-top:16px;font-size:1.15rem;color:#3B3F44;max-width:34em}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero-ctas .btn{flex:1 1 240px;white-space:nowrap}
+@media (min-width:880px){.hero-ctas .btn{flex:0 1 auto}}
+.selos{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:.95rem;color:#3B3F44}
+.selos a,.selos span{display:inline-flex;align-items:center;gap:6px;color:inherit;text-decoration:none}
+.estrelas{color:#E0A100;letter-spacing:1px}
+.hero-foto{position:relative;max-width:520px;justify-self:center;width:100%}
+.hero-foto picture img{border-radius:28px 28px 28px 28px;aspect-ratio:1/1;object-fit:cover;width:100%;box-shadow:var(--sombra)}
+/* o sorriso do logo como moldura */
+.sorriso{position:absolute;left:8%;right:8%;bottom:-26px;height:52px;pointer-events:none}
+.sorriso path{fill:none;stroke:var(--verde-marca);stroke-width:12;stroke-linecap:round;stroke-dasharray:460;stroke-dashoffset:0;animation:sorri 1.4s .3s cubic-bezier(.6,0,.2,1) both}
+@keyframes sorri{from{stroke-dashoffset:460}to{stroke-dashoffset:0}}
+.nota-chip{position:absolute;top:16px;right:-6px;background:#fff;border-radius:14px;padding:10px 14px;box-shadow:0 8px 24px rgba(20,60,40,.16);display:grid;gap:2px;text-decoration:none;color:var(--tinta);font-size:.8rem;line-height:1.2}
+.nota-chip strong{font-size:1.35rem;display:flex;align-items:center;gap:6px}
+.nota-chip strong span{color:#E0A100;font-size:1rem;letter-spacing:1px}
+@media (min-width:880px){.nota-chip{right:-22px;top:28px}}
+.hero-foto figcaption{position:absolute;left:14px;bottom:18px;background:rgba(255,255,255,.94);border-radius:12px;padding:8px 12px;font-size:.85rem;line-height:1.35;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.hero-foto figcaption strong{display:block;font-size:.95rem}
+
+/* Seções */
+section{padding-block:56px}
+.titulo-secao{display:grid;gap:10px;margin-bottom:28px;max-width:40em}
+.titulo-secao p{color:#474B50}
+
+/* Faixa de confiança */
+.garantias{border-block:1px solid var(--linha);background:#fff;padding-block:18px}
+.garantias ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+@media (min-width:880px){.garantias ul{grid-template-columns:repeat(4,1fr)}}
+.garantias li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;line-height:1.35}
+.garantias li svg{flex:none;width:26px;height:26px;color:var(--verde);margin-top:1px}
+.garantias strong{display:block;font-weight:600}
+.garantias span{color:var(--grafite);font-size:.85rem}
+
+/* Tratamentos */
+.tratamentos{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:640px){.tratamentos{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.tratamentos{grid-template-columns:repeat(4,1fr)}}
+.trat{display:flex;flex-direction:column;gap:10px;text-align:left;background:#fff;border:1.5px solid var(--linha);border-radius:var(--raio);padding:20px;font:inherit;color:inherit;cursor:pointer;transition:border-color .2s, box-shadow .2s}
+.trat:hover{border-color:var(--verde);box-shadow:var(--sombra)}
+.trat .ico{width:56px;height:56px;border-radius:50%;background:var(--verde-nevoa);display:grid;place-items:center;color:var(--verde);transition:background .2s,color .2s}
+.trat:hover .ico{background:var(--verde);color:#fff}
+.trat .ico svg{width:28px;height:28px}
+.trat p{font-size:1rem;color:#474B50}
+.trat .link{margin-top:auto;font-weight:600;color:var(--verde);font-size:1rem}
+.tambem{margin-top:18px;font-size:1rem;color:#474B50}
+
+/* Agendamento */
+#agendar{background:var(--verde-nevoa)}
+.agenda{background:#fff;border-radius:22px;box-shadow:var(--sombra);padding:22px;max-width:760px;margin-inline:auto}
+@media (min-width:640px){.agenda{padding:34px}}
+.passo{border-top:1px solid var(--linha);padding-top:22px;margin-top:22px}
+#passo-dia{border-top:0;padding-top:0;margin-top:0}
+.passo-titulo{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.passo-num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;font-weight:600}
+.passo[aria-disabled="true"] .passo-num{background:#C5CEC8}
+.passo[aria-disabled="true"] .passo-corpo{opacity:.45;pointer-events:none}
+.dias{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.dia{flex:none;scroll-snap-align:start;width:84px;min-height:92px;border:2px solid var(--linha);border-radius:14px;background:#fff;font:inherit;color:var(--tinta);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 4px}
+.dia .sem{font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;color:var(--grafite)}
+.dia .num{font-size:1.6rem;font-weight:600;line-height:1.1}
+.dia .mes{font-size:.85rem;color:var(--grafite)}
+.dia[aria-pressed="true"]{border-color:var(--verde);background:var(--verde);color:#fff}
+.dia[aria-pressed="true"] .sem,.dia[aria-pressed="true"] .mes{color:#E3F4E7}
+.dia:disabled{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+.dias-nav{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--grafite)}
+.periodo{margin-top:6px}
+.periodo h4{margin:6px 0 8px;font-size:1rem;font-weight:500;color:var(--grafite)}
+.horas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (min-width:560px){.horas{grid-template-columns:repeat(5,1fr)}}
+.hora{min-height:54px;border:2px solid var(--linha);border-radius:12px;background:#fff;font:inherit;font-size:1.15rem;font-weight:500;color:var(--tinta);cursor:pointer;font-variant-numeric:tabular-nums}
+.hora:hover{border-color:var(--verde)}
+.hora[aria-pressed="true"]{background:var(--verde);border-color:var(--verde);color:#fff}
+.vazio{padding:16px;border-radius:12px;background:var(--areia);font-size:1rem}
+.carregando{display:flex;align-items:center;gap:10px;color:var(--grafite);font-size:1rem;padding:12px 0}
+.spin{width:22px;height:22px;border:3px solid var(--linha);border-top-color:var(--verde);border-radius:50%;animation:gira 1s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.escolha{margin-bottom:14px;padding:12px 16px;border-radius:12px;background:var(--verde-nevoa);font-weight:500}
+.campo{display:grid;gap:6px;margin-bottom:16px}
+.campo label{font-weight:500}
+.campo input{font:inherit;font-size:1.15rem;min-height:56px;padding:.6rem 1rem;border:2px solid #BFCBC3;border-radius:12px;background:#fff;color:var(--tinta);width:100%}
+.campo input:focus{border-color:var(--verde);outline:none;box-shadow:0 0 0 4px rgba(29,106,71,.15)}
+.campo .ajuda{font-size:.9rem;color:var(--grafite)}
+.campo .erro{font-size:.95rem;color:var(--alerta);font-weight:500}
+.campo input[aria-invalid="true"]{border-color:var(--alerta)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--linha);background:#fff;border-radius:999px;padding:.55rem 1rem;min-height:46px;font:inherit;font-size:1rem;color:var(--tinta);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--verde);background:var(--verde-nevoa);color:var(--verde-escuro);font-weight:500}
+.chip[aria-pressed="true"]::before{content:"✓ "}
+.lgpd{font-size:.88rem;color:var(--grafite);margin:14px 0}
+.hp{position:absolute;left:-9999px}
+.form-erro{margin-top:12px;padding:12px 14px;border-radius:12px;background:#FDECEA;color:var(--alerta);font-weight:500}
+.sucesso{text-align:center;display:grid;gap:14px;justify-items:center}
+.sucesso .check{width:72px;height:72px;border-radius:50%;background:var(--verde);display:grid;place-items:center}
+.sucesso .check svg{width:40px;height:40px;color:#fff}
+.sucesso .resumo{font-size:1.3rem;font-weight:600}
+.sucesso .acoes{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.demo{margin:0 auto 18px;max-width:760px;font-size:.88rem;text-align:center;color:#6B4E00;background:#FFF3C4;border-radius:10px;padding:8px 12px}
+.alt-contato{text-align:center;margin-top:18px;font-size:1rem}
+
+/* Doutores */
+.doutores-grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:640px){.doutores-grid{grid-template-columns:1fr 1fr}}
+.doutor{background:#fff;border:1.5px solid var(--linha);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:120px 1fr}
+@media (min-width:640px){.doutor{grid-template-columns:1fr}}
+.doutor img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+@media (min-width:640px){.doutor img{aspect-ratio:5/4;object-position:center 25%}}
+.doutor-info{padding:18px 20px;display:grid;gap:6px;align-content:start}
+.doutor-info h3{font-size:1.2rem}
+.doutor-info .cro{font-size:.85rem;color:var(--grafite)}
+.doutor-info .esp{font-size:.95rem;font-weight:500;color:var(--verde-escuro)}
+.doutor-info p{font-size:.95rem;color:#474B50}
+.como{display:grid;gap:28px;align-items:center;margin-top:48px}
+@media (min-width:880px){.como{grid-template-columns:.9fr 1.1fr;gap:56px}}
+.como img{border-radius:22px;width:100%;aspect-ratio:1/1;object-fit:cover}
+.passos-lista{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px;counter-reset:p}
+.passos-lista li{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;counter-increment:p}
+.passos-lista li::before{content:counter(p);width:36px;height:36px;border-radius:50%;border:2px solid var(--verde);color:var(--verde);display:grid;place-items:center;font-weight:600}
+.passos-lista strong{display:block}
+
+/* Espaço */
+.espaco{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.espaco figure{margin:0;border-radius:18px;overflow:hidden}
+.espaco img{width:100%;height:100%;object-fit:cover}
+.espaco .e1{grid-column:1 / -1;aspect-ratio:3/2}
+.espaco .e2,.espaco .e3{aspect-ratio:4/5}
+@media (min-width:880px){.espaco{grid-template-columns:2fr 1fr 1fr}.espaco .e1{grid-column:auto;aspect-ratio:auto;min-height:340px}.espaco .e2,.espaco .e3{aspect-ratio:auto}}
+.espaco-legenda{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:baseline}
+.espaco-legenda p{color:#474B50;max-width:40em}
+
+/* Duvidas + local */
+.final{display:grid;gap:36px}
+@media (min-width:880px){.final{grid-template-columns:1.2fr .8fr;gap:56px}}
+details{border-bottom:1px solid var(--linha);padding:4px 0}
+summary{cursor:pointer;list-style:none;padding:16px 36px 16px 0;font-weight:500;position:relative;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:10px;font-size:1.6rem;color:var(--verde);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 16px;color:#474B50}
+.local{background:var(--verde-nevoa);border-radius:18px;padding:24px;display:grid;gap:14px;align-content:start}
+.local address{font-style:normal;font-size:1.15rem;font-weight:500}
+.horario{width:100%;border-collapse:collapse;font-size:1rem}
+.horario td{padding:6px 0;border-bottom:1px solid var(--linha)}
+.horario td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.local .btns{display:flex;flex-wrap:wrap;gap:10px}
+.local .btns .btn{flex:1 1 140px;min-height:50px;font-size:1rem}
+
+/* Rodapé */
+footer{background:#1E2124;color:#C9CDD1;padding-block:32px 110px;font-size:.9rem}
+footer .wrap{display:grid;gap:12px}
+footer a{color:#fff}
+footer img{width:150px;filter:grayscale(1) brightness(2.2)}
+footer details{border-color:#3A3F44}
+footer summary{color:#fff}
+footer summary::after{color:#fff}
+footer details p{color:#C9CDD1}
+
+/* Barra fixa no celular */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--linha);box-shadow:0 -6px 20px rgba(0,0,0,.08);padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;transform:translateY(120%);transition:transform .25s}
+.barra.mostrar{transform:none}
+.barra .btn{flex:1;min-height:54px;font-size:1.05rem}
+.barra .btn-wpp{flex:0 0 58px;padding:0;background:#25D366;color:#fff}
+@media (min-width:880px){.barra{display:none}}
+</style>
+</head>
+<body>
+<div class="aprovacao" id="aprovacao"><b>Versão para aprovação</b> · textos <span class="confirmar">pontilhados</span> são provisórios</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Odontopoli, voltar ao início"><img src="img/logo.svg" alt="Odontopoli Odontologia Especializada" width="168" height="39"></a>
+    <div class="topo-acoes">
+      <a class="topo-tel" href="tel:+551143079802" data-evento="clique_telefone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        <span>(11) 4307-9802</span><span class="sr">Ligar</span>
+      </a>
+      <a class="btn btn-primario" href="#agendar" data-evento="cta_topo">Agendar avaliação</a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Centro de Guarulhos · Rua Luiz Faccini, 400</p>
+        <h1 id="h1">Seu sorriso nas mãos de <em>especialistas</em>, pertinho de você.</h1>
+        <p class="sub">Marque sua avaliação com o Dr. Lucas e a Dra. Camila escolhendo o dia e o horário aqui mesmo. Leva menos de 1 minuto, e a nossa recepção confirma com você pelo WhatsApp.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primario" href="#agendar" id="cta-hero" data-evento="cta_hero">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            Escolher dia e horário
+          </a>
+          <a class="btn btn-secundario js-wpp" href="#" data-evento="clique_whatsapp" data-origem="hero">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+        <div class="selos">
+          <span>Seg a sex 9h às 18h · Sáb 9h às 12h</span>
+          <span>Dr. Lucas · CRO-SP 96.806</span>
+          <span>Dra. Camila · CRO-SP 96.771</span>
+        </div>
+      </div>
+      <figure class="hero-foto">
+        <picture>
+          <source srcset="img/doutores.webp" type="image/webp">
+          <img src="img/doutores.jpg" alt="Dra. Camila Hypólito e Dr. Lucas Hypólito no consultório da Odontopoli" width="900" height="918" fetchpriority="high">
+        </picture>
+        <figcaption><strong>Dra. Camila e Dr. Lucas</strong>Cirurgiões-dentistas da Odontopoli</figcaption>
+        <a class="nota-chip" href="https://www.google.com/maps/search/?api=1&query=Odontopoli%20Guarulhos&query_place_id=ChIJlYwU9Wj1zpQR8Rowm4plGkI" target="_blank" rel="noopener" data-evento="clique_avaliacoes_google"><strong>5,0 <span aria-hidden="true">★★★★★</span></strong>Avaliação no Google</a>
+        <svg class="sorriso" viewBox="0 0 400 52" preserveAspectRatio="none" aria-hidden="true"><path d="M8 8 Q200 72 392 8"/></svg>
+      </figure>
+    </div>
+  </section>
+
+
+  <div class="garantias" aria-label="Diferenciais">
+    <div class="wrap"><ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5"/></svg><div><strong>Avaliação com os doutores</strong><span>Quem avalia é quem vai tratar</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5Z"/><path d="M7 11.5V16c0 1.5 2.2 3 5 3s5-1.5 5-3v-4.5M21 9v5"/></svg><div><strong>Doutorado em Odontologia</strong><span>Formação do Dr. Lucas</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 11c1.5-2 3-3 5-3s3.5 1 5 3"/></svg><div><strong>Escaneamento digital</strong><span>Planejamento do sorriso em 3D</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><strong>Centro de Guarulhos</strong><span>Rua Luiz Faccini, 400</span></div></li>
+    </ul></div>
+  </div>
+
+  <section id="tratamentos" aria-labelledby="h-trat">
+    <div class="wrap">
+      <div class="titulo-secao">
+        <p class="eyebrow">Tratamentos</p>
+        <h2 id="h-trat">O que você quer resolver no seu sorriso?</h2>
+        <p>Toque no tratamento para já deixar marcado no seu agendamento.</p>
+      </div>
+      <div class="tratamentos">
+        <button class="trat" type="button" data-interesse="Aparelho ortodôntico">
+          <span class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 14c3 3 21 3 24 0M4 18c3-3 21-3 24 0"/><rect x="8" y="13" width="3" height="6" rx="1"/><rect x="14.5" y="13" width="3" height="6" rx="1"/><rect x="21" y="13" width="3" height="6" rx="1"/></svg></span>
+          <h3>Aparelho ortodôntico</h3>
+          <p>Para dentes tortos, separados ou mordida fora do lugar, em adultos e crianças.</p>
+          <span class="link">Quero avaliar →</span>
+        </button>
+        <button class="trat" type="button" data-interesse="Invisalign">
+          <span class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12c0 8 5 12 11 12s11-4 11-12c-4 2-18 2-22 0Z" stroke-dasharray="3 2"/><path d="M9 12v4M14 12.5v4.5M18 12.5v4.5M23 12v4"/></svg></span>
+          <h3>Alinhadores Invisalign</h3>
+          <p>Placas transparentes que alinham os dentes sem fios nem braquetes, planejadas com escaneamento digital.</p>
+          <span class="link">Quero avaliar →</span>
+        </button>
+        <button class="trat" type="button" data-interesse="Implante dentário">
+          <span class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 5c-3 0-5 2-5 5 0 2 1 3 2 4h18c1-1 2-2 2-4 0-3-2-5-5-5-2 0-3 1-4 1s-2-1-4-1Z"/><path d="M13 14v3h6v-3M12 19h8M13 22h6M14 25h4M15 28h2"/></svg></span>
+          <h3>Implantes dentários</h3>
+          <p>Para repor um ou vários dentes perdidos com dentes fixos, planejados a partir de exames de imagem.</p>
+          <span class="link">Quero avaliar →</span>
+        </button>
+        <button class="trat" type="button" data-interesse="Estética (lentes, facetas, clareamento)">
+          <span class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 13c2 7 18 7 20 0"/><path d="M9 14.5v3M13 15.5v3.5M19 15.5v3.5M23 14.5v3"/><path d="M24 4l1 2.5L27.5 7 25 8l-1 2.5L23 8l-2.5-1L23 6Z" fill="currentColor" stroke="none"/></svg></span>
+          <h3>Estética do sorriso</h3>
+          <p>Lentes de contato dental, facetas e clareamento para ajustar cor, forma e tamanho dos dentes com naturalidade.</p>
+          <span class="link">Quero avaliar →</span>
+        </button>
+      </div>
+      <p class="tambem">Também atendemos periodontia (gengiva), dor na mandíbula (ATM), ronco e apneia do sono, harmonização facial e clínica geral.</p>
+    </div>
+  </section>
+
+  <section id="agendar" aria-labelledby="h-agenda">
+    <div class="wrap">
+      <div class="titulo-secao" style="margin-inline:auto;text-align:center">
+        <p class="eyebrow">Agendamento online</p>
+        <h2 id="h-agenda">Marque sua avaliação em 3 passos</h2>
+        <p>Os horários abaixo são os que estão livres agora na agenda da clínica.</p>
+      </div>
+      <p class="demo" id="aviso-demo" hidden>Modo demonstração: os horários são de exemplo e nada é gravado. A agenda real entra quando o Google Agenda for conectado.</p>
+
+      <div class="agenda" id="agenda">
+        <div id="fluxo">
+          <div class="passo" id="passo-dia">
+            <div class="passo-titulo"><span class="passo-num">1</span><h3>Escolha o dia</h3></div>
+            <div class="passo-corpo">
+              <div class="dias" id="dias" role="group" aria-label="Dias disponíveis">
+                <div class="carregando"><span class="spin"></span> Buscando os dias livres…</div>
+              </div>
+              <div class="dias-nav"><span>Arraste para o lado para ver mais dias →</span></div>
+            </div>
+          </div>
+
+          <div class="passo" id="passo-hora" aria-disabled="true">
+            <div class="passo-titulo"><span class="passo-num">2</span><h3>Escolha o horário</h3></div>
+            <div class="passo-corpo" id="horas-area" aria-live="polite">
+              <p class="vazio">Primeiro escolha um dia acima.</p>
+            </div>
+          </div>
+
+          <form class="passo" id="passo-dados" aria-disabled="true" novalidate>
+            <div class="passo-titulo"><span class="passo-num">3</span><h3>Seus dados</h3></div>
+            <div class="passo-corpo">
+              <p class="escolha" id="resumo-escolha" hidden></p>
+              <div class="campo">
+                <label for="nome">Seu nome</label>
+                <input id="nome" name="nome" type="text" autocomplete="name" autocapitalize="words" required>
+                <span class="erro" id="erro-nome" hidden>Escreva seu nome, por favor.</span>
+              </div>
+              <div class="campo">
+                <label for="whats">Seu WhatsApp com DDD</label>
+                <input id="whats" name="whats" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(11) 90000-0000" required>
+                <span class="ajuda">É por ele que a recepção vai confirmar o seu horário.</span>
+                <span class="erro" id="erro-whats" hidden>Confira o número. Ele precisa ter DDD e 8 ou 9 dígitos.</span>
+              </div>
+              <div class="campo">
+                <span id="lbl-interesse" style="font-weight:500">O que você gostaria de avaliar? <span style="font-weight:400;color:var(--grafite)">(opcional)</span></span>
+                <div class="chips" role="group" aria-labelledby="lbl-interesse" id="chips">
+                  <button type="button" class="chip" aria-pressed="false" data-valor="Aparelho ortodôntico">Aparelho</button>
+                  <button type="button" class="chip" aria-pressed="false" data-valor="Invisalign">Invisalign</button>
+                  <button type="button" class="chip" aria-pressed="false" data-valor="Implante dentário">Implante</button>
+                  <button type="button" class="chip" aria-pressed="false" data-valor="Estética (lentes, facetas, clareamento)">Estética</button>
+                  <button type="button" class="chip" aria-pressed="false" data-valor="Dor ou incômodo">Dor ou incômodo</button>
+                  <button type="button" class="chip" aria-pressed="false" data-valor="Check-up e limpeza">Check-up</button>
+                  <button type="button" class="chip" aria-pressed="false" data-valor="Ainda não sei">Ainda não sei</button>
+                </div>
+              </div>
+              <input class="hp" type="text" name="site" id="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <p class="lgpd">Ao confirmar, você autoriza a Odontopoli a usar seu nome e WhatsApp para confirmar e lembrar a sua consulta. Veja a <a href="#privacidade">política de privacidade</a>.</p>
+              <button class="btn btn-primario" type="submit" id="btn-confirmar" style="width:100%">Confirmar meu agendamento</button>
+              <p class="form-erro" id="erro-envio" role="alert" hidden></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="sucesso" id="sucesso" hidden tabindex="-1">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3 id="sucesso-titulo">Pronto! Sua avaliação está reservada.</h3>
+          <p class="resumo" id="sucesso-quando"></p>
+          <p>Rua Luiz Faccini, 400, Centro, Guarulhos.<br>A recepção vai te chamar no WhatsApp para confirmar. Se precisar remarcar, é só responder a mensagem.</p>
+          <div class="acoes">
+            <a class="btn btn-secundario" id="add-agenda" href="#" target="_blank" rel="noopener" data-evento="clique_add_agenda">Salvar na minha agenda</a>
+            <a class="btn btn-secundario" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Luiz%20Faccini%2C%20400%2C%20Guarulhos%20SP" target="_blank" rel="noopener" data-evento="clique_rota">Ver como chegar</a>
+          </div>
+        </div>
+      </div>
+      <p class="alt-contato">Prefere falar com alguém? Ligue <strong>(11) 4307-9802</strong> ou <a href="#" class="js-wpp" data-evento="clique_whatsapp" data-origem="agenda">chame no WhatsApp</a>.</p>
+    </div>
+  </section>
+
+  <section id="doutores" aria-labelledby="h-dout">
+    <div class="wrap">
+      <div class="titulo-secao">
+        <p class="eyebrow">Quem vai cuidar de você</p>
+        <h2 id="h-dout">Aqui quem avalia o seu caso são os próprios doutores.</h2>
+        <p>A Odontopoli é a clínica do Dr. Lucas e da Dra. Camila Hypólito. Você é atendido por eles do primeiro dia até o fim do tratamento.</p>
+      </div>
+      <div class="doutores-grid">
+        <article class="doutor">
+          <picture><source srcset="img/lucas.webp" type="image/webp"><img src="img/lucas.jpg" alt="Dr. Lucas Hypólito" width="700" height="744" loading="lazy"></picture>
+          <div class="doutor-info">
+            <h3>Dr. Lucas Hypólito</h3>
+            <span class="cro">Cirurgião-dentista · CRO-SP 96.806</span>
+            <span class="esp">Doutorado em Odontologia · <span class="confirmar">Implantodontia e reabilitação oral</span></span>
+            <p class="confirmar">Cuida de quem perdeu dentes e quer voltar a mastigar e sorrir com segurança, com planejamento feito a partir de exames de imagem.</p>
+          </div>
+        </article>
+        <article class="doutor">
+          <picture><source srcset="img/camila.webp" type="image/webp"><img src="img/camila.jpg" alt="Dra. Camila Hypólito" width="700" height="805" loading="lazy"></picture>
+          <div class="doutor-info">
+            <h3>Dra. Camila Hypólito</h3>
+            <span class="cro">Cirurgiã-dentista · CRO-SP 96.771</span>
+            <span class="esp confirmar">Ortodontia, Invisalign e estética do sorriso</span>
+            <p class="confirmar">Alinha dentes com aparelho ou alinhadores transparentes e desenha sorrisos com lentes, facetas e clareamento, sempre buscando um resultado natural.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="como">
+        <picture><source srcset="img/conversa.webp" type="image/webp"><img src="img/conversa.jpg" alt="Dra. Camila conversando com uma paciente no consultório" width="800" height="840" loading="lazy"></picture>
+        <div>
+          <p class="eyebrow">Como funciona</p>
+          <h2 style="margin-top:8px">Da escolha do horário ao plano de tratamento</h2>
+          <ol class="passos-lista">
+            <li><div><strong>Você escolhe o dia e o horário</strong>Aqui mesmo nesta página, sem precisar ligar.</div></li>
+            <li><div><strong>A recepção confirma pelo WhatsApp</strong>E manda a localização para facilitar a sua chegada.</div></li>
+            <li><div><strong>Avaliação com os doutores</strong>Eles examinam com calma, mostram os exames e explicam as opções com palavras simples. Você decide com tranquilidade.</div></li>
+          </ol>
+          <a class="btn btn-primario" href="#agendar" style="margin-top:26px" data-evento="cta_doutores">Agendar minha avaliação</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-espaco" style="padding-top:0">
+    <div class="wrap">
+      <div class="espaco">
+        <figure class="e1"><picture><source srcset="img/recepcao.webp" type="image/webp"><img src="img/recepcao.jpg" alt="Recepção da Odontopoli com poltronas de couro e piso de madeira" width="1000" height="667" loading="lazy"></picture></figure>
+        <figure class="e2"><picture><source srcset="img/parede.webp" type="image/webp"><img src="img/parede.jpg" alt="Frase na parede da recepção: Forma, design e estilo. Isso define o seu sorriso." width="700" height="766" loading="lazy"></picture></figure>
+        <figure class="e3"><picture><source srcset="img/consultorio.webp" type="image/webp"><img src="img/consultorio.jpg" alt="Consultório da Odontopoli" width="900" height="600" loading="lazy"></picture></figure>
+      </div>
+      <div class="espaco-legenda">
+        <h2 id="h-espaco">Um espaço feito para você ficar à vontade</h2>
+        <p>Recepção aconchegante, consultórios claros e atendimento com hora marcada, sem sala de espera cheia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas" aria-labelledby="h-duv" style="background:var(--verde-nevoa)">
+    <div class="wrap final">
+      <div>
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h2 id="h-duv" style="margin-bottom:12px">Antes de marcar</h2>
+        <details><summary>Quanto tempo dura a avaliação?</summary><p>Reserve cerca de <span class="confirmar">30 minutos</span>. É o tempo para o exame, a conversa com os doutores e a explicação das opções de tratamento.</p></details>
+        <details><summary>A avaliação tem custo?</summary><p class="confirmar">A recepção informa os valores pelo WhatsApp quando confirmar o seu horário, de acordo com o seu caso.</p></details>
+        <details><summary>O que eu levo no dia?</summary><p>Um documento com foto e, se tiver, radiografias ou exames recentes dos dentes.</p></details>
+        <details><summary>E se eu precisar remarcar?</summary><p>Responda a mensagem de confirmação no WhatsApp ou ligue para (11) 4307-9802. A gente encontra outro horário para você.</p></details>
+        <details><summary>Vocês atendem convênio?</summary><p class="confirmar">O atendimento é particular. Na confirmação pelo WhatsApp a recepção explica as formas de pagamento.</p></details>
+      </div>
+      <aside class="local" aria-labelledby="h-local">
+        <h3 id="h-local">Onde estamos</h3>
+        <address>Rua Luiz Faccini, 400<br>Centro · Guarulhos · SP</address>
+        <table class="horario" aria-label="Horário de atendimento">
+          <tr><td>Segunda a sexta</td><td>9h às 18h</td></tr>
+          <tr><td>Sábado</td><td>9h às 12h</td></tr>
+          <tr><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+        <div class="btns">
+          <a class="btn btn-secundario" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Luiz%20Faccini%2C%20400%2C%20Guarulhos%20SP" target="_blank" rel="noopener" data-evento="clique_rota">Google Maps</a>
+          <a class="btn btn-secundario" href="https://waze.com/ul?q=Rua%20Luiz%20Faccini%20400%20Guarulhos&navigate=yes" target="_blank" rel="noopener" data-evento="clique_rota_waze">Waze</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.svg" alt="Odontopoli" width="150" height="35" loading="lazy">
+    <p>Odontopoli Serviços Odontológicos Ltda · CNPJ 44.569.916/0001-32<br>
+    Rua Luiz Faccini, 400, Centro, Guarulhos/SP · (11) 4307-9802<br>
+    Dr. Lucas Hypólito, CRO-SP 96.806 · Dra. Camila Hypólito, CRO-SP 96.771<br>
+    Responsável técnica: <span class="confirmar">Dra. Camila Hypólito, CRO-SP 96.771</span> · Inscrição da clínica: <span class="confirmar">CRO-SP EPAO 00000</span><br>
+    <a href="https://www.instagram.com/odonto.poli/" target="_blank" rel="noopener" data-evento="clique_instagram">Instagram @odonto.poli</a></p>
+    <details id="privacidade"><summary>Política de privacidade</summary>
+      <p>Os dados enviados neste site (nome, WhatsApp e o tratamento de interesse) são usados apenas pela Odontopoli para confirmar, lembrar e organizar a sua consulta, e para melhorar a divulgação da clínica. Não vendemos nem compartilhamos seus dados com terceiros além das ferramentas que usamos para isso (Google e Meta). Você pode pedir a exclusão dos seus dados a qualquer momento pelo WhatsApp (11) 4307-9802. Este site usa cookies de medição de anúncios.</p>
+    </details>
+    <p>Site criado por E4T Marketing.</p>
+  </div>
+</footer>
+
+<div class="barra" id="barra" aria-hidden="true">
+  <a class="btn btn-primario" href="#agendar" tabindex="-1" data-evento="cta_barra">Agendar avaliação</a>
+  <a class="btn btn-wpp js-wpp" href="#" tabindex="-1" aria-label="WhatsApp" data-evento="clique_whatsapp" data-origem="barra"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg></a>
+</div>
+
+<script>
+/* =========================================================
+   CONFIGURAÇÃO · a E4T preenche aqui
+   ========================================================= */
+var CONFIG = {
+  API_URL: "",                 // URL do Google Apps Script (termina em /exec). Vazio = modo demonstração
+  WHATSAPP: "551143079802",    // número que recebe o clique no WhatsApp (só dígitos, com 55)
+  WHATSAPP_MSG: "Olá! Vim pelo site e gostaria de agendar uma avaliação.",
+  GTM_ID: "",                  // ex.: GTM-XXXXXXX (GA4 e Google Ads entram pelo GTM)
+  META_PIXEL_ID: "",           // ex.: 123456789012345
+  DIAS_A_FRENTE: 21,           // quantos dias a agenda mostra
+  DURACAO_MIN: 30,             // duração da avaliação (tem que ser igual à do Apps Script)
+  APROVACAO: true,            // true mostra a faixa 'Versão para aprovação' e os sublinhados. false na versão final
+  ENDERECO: "Rua Luiz Faccini, 400 - Centro, Guarulhos - SP"
+};
+
+(function(){
+  "use strict";
+  var DEMO = !CONFIG.API_URL;
+  var $ = function(s,el){return (el||document).querySelector(s)};
+  var $$ = function(s,el){return Array.prototype.slice.call((el||document).querySelectorAll(s))};
+  var store = {
+    get:function(k){try{return JSON.parse(sessionStorage.getItem(k))}catch(e){return null}},
+    set:function(k,v){try{sessionStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+  };
+
+  /* ---------- Rastreamento: GTM, Pixel e parâmetros de campanha ---------- */
+  window.dataLayer = window.dataLayer || [];
+  function evento(nome, dados){
+    var d = Object.assign({event:nome}, dados||{});
+    window.dataLayer.push(d);
+  }
+  if (CONFIG.GTM_ID){
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',CONFIG.GTM_ID);
+  }
+  if (CONFIG.META_PIXEL_ID){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', CONFIG.META_PIXEL_ID); fbq('track','PageView');
+  }
+  function pixel(ev, dados, id){ if (window.fbq) fbq('track', ev, dados||{}, id?{eventID:id}:undefined); }
+
+  // guarda a origem do visitante (primeiro clique da sessão)
+  var origem = store.get("odp_origem");
+  if (!origem){
+    var q = new URLSearchParams(location.search);
+    origem = {};
+    ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","gbraid","wbraid","fbclid"].forEach(function(k){ if(q.get(k)) origem[k]=q.get(k); });
+    origem.referrer = document.referrer || "";
+    origem.landing = location.href.split("#")[0];
+    origem.chegada = new Date().toISOString();
+    store.set("odp_origem", origem);
+  }
+  function cookie(n){var m=document.cookie.match(new RegExp('(?:^|; )'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):"";}
+  function uuid(){ if (window.crypto && crypto.randomUUID) return crypto.randomUUID(); return 'l'+Date.now().toString(36)+Math.random().toString(36).slice(2,10); }
+
+  evento("lp_view", {pagina:"odontopoli_guarulhos"});
+
+  // cliques rastreados
+  document.addEventListener("click", function(e){
+    var a = e.target.closest("[data-evento]");
+    if (a) evento(a.getAttribute("data-evento"), {origem_clique:a.getAttribute("data-origem")||""});
+  });
+
+  // WhatsApp
+  var wppUrl = "https://wa.me/"+CONFIG.WHATSAPP+"?text="+encodeURIComponent(CONFIG.WHATSAPP_MSG);
+  $$(".js-wpp").forEach(function(a){ a.href = wppUrl; a.target="_blank"; a.rel="noopener";
+    a.addEventListener("click", function(){ pixel("Contact"); }); });
+
+  /* ---------- Barra fixa no celular ---------- */
+  var barra = $("#barra"), ctaHero = $("#cta-hero"), secAgenda = $("#agendar");
+  var heroVisivel = true, agendaVisivel = false;
+  function atualizaBarra(){ var mostrar = !heroVisivel && !agendaVisivel; barra.classList.toggle("mostrar", mostrar); barra.setAttribute("aria-hidden", mostrar?"false":"true"); $$("a",barra).forEach(function(a){a.tabIndex = mostrar?0:-1;}); }
+  if ("IntersectionObserver" in window){
+    new IntersectionObserver(function(en){ heroVisivel = en[0].isIntersecting; atualizaBarra(); }).observe(ctaHero);
+    new IntersectionObserver(function(en){ agendaVisivel = en[0].isIntersecting; atualizaBarra(); },{threshold:.15}).observe(secAgenda);
+  }
+
+  /* ---------- Agenda ---------- */
+  var MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+  var MESES_LONGO = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+  var SEMANA = ["dom","seg","ter","qua","qui","sex","sáb"];
+  var SEMANA_LONGO = ["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"];
+  var estado = { dias:[], dia:null, hora:null, interesses:[] , iniciou:false};
+
+  function dataDe(iso){ var p=iso.split("-"); return new Date(+p[0], +p[1]-1, +p[2]); }
+  function isoDe(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+  function extenso(iso, hora){ var d=dataDe(iso); return SEMANA_LONGO[d.getDay()]+", "+d.getDate()+" de "+MESES_LONGO[d.getMonth()]+(hora?" às "+hora.replace(":","h"):""); }
+
+  // Modo demonstração: gera horários de exemplo na regra combinada (seg-sex 9-18, sáb 9-12)
+  function demoDias(){
+    var dias=[], hoje=new Date(), agora=hoje.getHours()*60+hoje.getMinutes();
+    for (var i=0;i<CONFIG.DIAS_A_FRENTE;i++){
+      var d=new Date(hoje.getFullYear(),hoje.getMonth(),hoje.getDate()+i), w=d.getDay();
+      if (w===0) continue;
+      var fim = w===6 ? 12*60 : 18*60, slots=[];
+      for (var m=9*60; m+CONFIG.DURACAO_MIN<=fim; m+=CONFIG.DURACAO_MIN){
+        if (i===0 && m < agora+120) continue;
+        if (m >= 13*60 && m < 14*60) continue; // almoço
+        var ocupado = ((d.getDate()*7 + m/30*3) % 5)===0 || ((d.getDate()+m/30) % 7)===0;
+        if (!ocupado) slots.push(String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0"));
+      }
+      dias.push({date:isoDe(d), slots:slots});
+    }
+    return Promise.resolve({ok:true, days:dias});
+  }
+  function api(params){
+    var url = CONFIG.API_URL + "?" + new URLSearchParams(params).toString();
+    return fetch(url, {method:"GET"}).then(function(r){ return r.json(); });
+  }
+  function carregarDias(){
+    var p = DEMO ? demoDias() : api({action:"slots", days:CONFIG.DIAS_A_FRENTE});
+    return p.then(function(res){
+      if (!res || !res.ok) throw new Error("falha");
+      estado.dias = res.days || [];
+      desenhaDias();
+    }).catch(function(){
+      $("#dias").innerHTML = '<p class="vazio">Não conseguimos carregar a agenda agora. Chame a gente no <a href="'+wppUrl+'" target="_blank" rel="noopener">WhatsApp</a> ou ligue (11) 4307-9802 que marcamos para você.</p>';
+    });
+  }
+  function desenhaDias(){
+    var box = $("#dias"); box.innerHTML = "";
+    var algum = false;
+    estado.dias.forEach(function(dd){
+      var d = dataDe(dd.date), livre = dd.slots && dd.slots.length>0;
+      var b = document.createElement("button");
+      b.type="button"; b.className="dia"; b.setAttribute("aria-pressed", estado.dia===dd.date?"true":"false");
+      b.disabled = !livre; b.dataset.date = dd.date;
+      b.setAttribute("aria-label", extenso(dd.date)+(livre? ", "+dd.slots.length+" horários livres" : ", sem horários"));
+      b.innerHTML = '<span class="sem">'+SEMANA[d.getDay()]+'</span><span class="num">'+d.getDate()+'</span><span class="mes">'+MESES[d.getMonth()]+'</span>';
+      b.addEventListener("click", function(){ escolheDia(dd.date); });
+      box.appendChild(b); if (livre) algum=true;
+    });
+    if (!algum) box.innerHTML = '<p class="vazio">A agenda online está cheia nos próximos dias. Chame no <a href="'+wppUrl+'" target="_blank" rel="noopener">WhatsApp</a> que a recepção encaixa você.</p>';
+  }
+  function iniciou(){ if(!estado.iniciou){ estado.iniciou=true; evento("agenda_inicio"); } }
+  function escolheDia(iso){
+    iniciou();
+    estado.dia = iso; estado.hora = null;
+    $$(".dia").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.date===iso?"true":"false"); });
+    evento("agenda_dia", {dia:iso});
+    var dd = estado.dias.filter(function(x){return x.date===iso})[0];
+    var manha = dd.slots.filter(function(h){return h<"12:00"}), tarde = dd.slots.filter(function(h){return h>="12:00"});
+    var area = $("#horas-area"); area.innerHTML="";
+    var t = document.createElement("p"); t.style.marginBottom="6px"; t.innerHTML = "Horários livres na <strong>"+extenso(iso)+"</strong>:"; area.appendChild(t);
+    [["Manhã",manha],["Tarde",tarde]].forEach(function(g){
+      if (!g[1].length) return;
+      var wrap = document.createElement("div"); wrap.className="periodo";
+      wrap.innerHTML = "<h4>"+g[0]+"</h4>";
+      var grid = document.createElement("div"); grid.className="horas";
+      g[1].forEach(function(h){
+        var b=document.createElement("button"); b.type="button"; b.className="hora"; b.textContent=h.replace(":","h"); b.dataset.hora=h; b.setAttribute("aria-pressed","false");
+        b.addEventListener("click", function(){ escolheHora(h); });
+        grid.appendChild(b);
+      });
+      wrap.appendChild(grid); area.appendChild(wrap);
+    });
+    $("#passo-hora").setAttribute("aria-disabled","false");
+    $("#passo-dados").setAttribute("aria-disabled","true");
+    $("#resumo-escolha").hidden = true;
+    $("#passo-hora").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+  function escolheHora(h){
+    estado.hora = h;
+    $$(".hora").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.hora===h?"true":"false"); });
+    evento("agenda_horario", {dia:estado.dia, horario:h});
+    var r = $("#resumo-escolha"); r.hidden=false; r.textContent = "Você escolheu: "+extenso(estado.dia, h)+".";
+    $("#passo-dados").setAttribute("aria-disabled","false");
+    $("#passo-dados").scrollIntoView({behavior:"smooth", block:"start"});
+    setTimeout(function(){ try{$("#nome").focus({preventScroll:true});}catch(e){} }, 450);
+  }
+
+  // interesse vindo dos cards de tratamento
+  function marcaInteresse(v, ligado){
+    var i = estado.interesses.indexOf(v);
+    if (ligado && i<0) estado.interesses.push(v);
+    if (!ligado && i>=0) estado.interesses.splice(i,1);
+    $$(".chip").forEach(function(c){ if(c.dataset.valor===v) c.setAttribute("aria-pressed", ligado?"true":"false"); });
+  }
+  $$(".chip").forEach(function(c){ c.addEventListener("click", function(){ marcaInteresse(c.dataset.valor, c.getAttribute("aria-pressed")!=="true"); }); });
+  $$(".trat").forEach(function(c){ c.addEventListener("click", function(){
+    var v=c.dataset.interesse; marcaInteresse(v,true); evento("clique_tratamento",{tratamento:v}); iniciou();
+    secAgenda.scrollIntoView({behavior:"smooth"});
+  }); });
+
+  // máscara do WhatsApp
+  var inWhats = $("#whats");
+  inWhats.addEventListener("input", function(){
+    var d = inWhats.value.replace(/\D/g,"").replace(/^55(?=\d{10,11}$)/,"").slice(0,11), o="";
+    if (d.length>0) o="("+d.slice(0,2); if (d.length>=2) o+=") ";
+    if (d.length>2){ if (d.length<=10){ o+=d.slice(2,6); if(d.length>6) o+="-"+d.slice(6); } else { o+=d.slice(2,7)+"-"+d.slice(7); } }
+    inWhats.value=o;
+  });
+
+  function googleAgendaLink(iso,h){
+    var p=iso.split("-"), hh=+h.slice(0,2), mm=+h.slice(3,5);
+    var ini = new Date(Date.UTC(+p[0],+p[1]-1,+p[2],hh+3,mm)); // Brasília = UTC-3
+    var fim = new Date(ini.getTime()+CONFIG.DURACAO_MIN*60000);
+    function f(d){ return d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,""); }
+    return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Avaliação na Odontopoli")+"&dates="+f(ini)+"/"+f(fim)+"&location="+encodeURIComponent(CONFIG.ENDERECO)+"&details="+encodeURIComponent("Avaliação odontológica com o Dr. Lucas e a Dra. Camila. Telefone (11) 4307-9802.");
+  }
+
+  $("#passo-dados").addEventListener("submit", function(e){
+    e.preventDefault();
+    var nome = $("#nome").value.trim(), fone = inWhats.value.replace(/\D/g,"");
+    var ok = true;
+    $("#erro-nome").hidden = nome.length>=2; $("#nome").setAttribute("aria-invalid", nome.length>=2?"false":"true"); if (nome.length<2) ok=false;
+    var foneOk = /^[1-9]{2}9?\d{8}$/.test(fone);
+    $("#erro-whats").hidden = foneOk; inWhats.setAttribute("aria-invalid", foneOk?"false":"true"); if(!foneOk) ok=false;
+    if (!estado.dia || !estado.hora){ ok=false; $("#passo-dia").scrollIntoView({behavior:"smooth"}); }
+    if (!ok){ var inv=$("[aria-invalid='true']"); if(inv) inv.focus(); return; }
+    if ($("#site").value) return; // robô
+
+    var btn = $("#btn-confirmar"); btn.disabled = true; btn.textContent = "Reservando seu horário…";
+    $("#erro-envio").hidden = true;
+    var lead = {
+      action:"book", lead_id: uuid(), date: estado.dia, time: estado.hora,
+      name: nome, phone: "55"+fone, interests: estado.interesses.join(", "),
+      origem: origem, fbp: cookie("_fbp"), fbc: cookie("_fbc") || (origem.fbclid? "fb.1."+Date.now()+"."+origem.fbclid : ""),
+      page: location.href.split("#")[0], ua: navigator.userAgent
+    };
+    var envio = DEMO ? new Promise(function(r){ setTimeout(function(){ r({ok:true}); }, 900); })
+      : fetch(CONFIG.API_URL, {method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(lead)}).then(function(r){return r.json();});
+    envio.then(function(res){
+      if (res && res.ok){
+        evento("generate_lead", {lead_id:lead.lead_id, dia:lead.date, horario:lead.time, interesse:lead.interests, value:1, currency:"BRL"});
+        evento("agendamento_confirmado", {lead_id:lead.lead_id});
+        pixel("Lead", {content_name:"Avaliação Guarulhos"}, lead.lead_id);
+        pixel("Schedule", {content_name:"Avaliação Guarulhos"}, lead.lead_id+"-s");
+        $("#fluxo").hidden = true;
+        $("#sucesso-titulo").textContent = "Pronto, "+nome.split(" ")[0]+"! Sua avaliação está reservada.";
+        $("#sucesso-quando").textContent = extenso(lead.date, lead.time).replace(/^./, function(c){return c.toUpperCase()});
+        $("#add-agenda").href = googleAgendaLink(lead.date, lead.time);
+        var s=$("#sucesso"); s.hidden=false; s.focus(); s.scrollIntoView({behavior:"smooth", block:"center"});
+      } else if (res && res.error==="ocupado"){
+        $("#erro-envio").textContent = "Esse horário acabou de ser reservado por outra pessoa. Escolha outro horário, por favor.";
+        $("#erro-envio").hidden = false; evento("agenda_conflito");
+        carregarDias().then(function(){ escolheDia(estado.dia); });
+      } else { throw new Error((res&&res.error)||"falha"); }
+    }).catch(function(){
+      $("#erro-envio").innerHTML = 'Não conseguimos concluir agora. Tente de novo ou chame no <a href="'+wppUrl+'" target="_blank" rel="noopener">WhatsApp</a> que a recepção marca para você.';
+      $("#erro-envio").hidden = false; evento("agenda_erro");
+    }).then(function(){ btn.disabled=false; btn.textContent="Confirmar meu agendamento"; });
+  });
+
+  if (DEMO) $("#aviso-demo").hidden = false;
+  if (!CONFIG.APROVACAO){ $("#aprovacao").hidden = true; $$(".confirmar").forEach(function(el){ el.classList.remove("confirmar"); }); }
+  carregarDias();
+})();
+</script>
+</body>
+</html>
