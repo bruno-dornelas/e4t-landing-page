@@ -14,7 +14,7 @@
 <meta name="theme-color" content="#1D6A47">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Allura&display=swap">
 <style>
 :root{
   color-scheme: light;
@@ -77,36 +77,34 @@ p{margin:0}
 .topo .btn{min-height:44px;font-size:.95rem;padding:.4rem 1rem}
 @media (max-width:560px){.topo .logo img{width:138px}.topo-tel span{display:none}.topo .btn{display:none}}
 
-/* Hero */
-.hero{background:linear-gradient(180deg,var(--verde-nevoa),#fff 85%);padding-block:28px 40px;overflow:hidden}
-.hero .wrap{display:grid;gap:28px;align-items:center}
-@media (min-width:880px){.hero .wrap{grid-template-columns:1.05fr .95fr;gap:56px}.hero{padding-block:56px 64px}}
-.hero h1{font-size:var(--fs-3);margin-top:10px}
-.hero h1 em{font-style:normal;color:var(--verde)}
-.hero .sub{margin-top:16px;font-size:1.15rem;color:#3B3F44;max-width:34em}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.hero-ctas .btn{flex:1 1 240px;white-space:nowrap}
-@media (min-width:880px){.hero-ctas .btn{flex:0 1 auto}}
-.selos{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:.95rem;color:#3B3F44}
-.selos a,.selos span{display:inline-flex;align-items:center;gap:6px;color:inherit;text-decoration:none}
-.estrelas{color:#E0A100;letter-spacing:1px}
-.hero-foto{position:relative;max-width:520px;justify-self:center;width:100%}
-.hero-foto picture img{border-radius:28px 28px 28px 28px;aspect-ratio:1/1;object-fit:cover;width:100%;box-shadow:var(--sombra)}
-/* o sorriso do logo como moldura */
-.sorriso{position:absolute;left:8%;right:8%;bottom:-26px;height:52px;pointer-events:none}
-.sorriso path{fill:none;stroke:var(--verde-marca);stroke-width:12;stroke-linecap:round;stroke-dasharray:460;stroke-dashoffset:0;animation:sorri 1.4s .3s cubic-bezier(.6,0,.2,1) both}
-@keyframes sorri{from{stroke-dashoffset:460}to{stroke-dashoffset:0}}
-.nota-chip{position:absolute;top:16px;right:-6px;background:#fff;border-radius:14px;padding:10px 14px;box-shadow:0 8px 24px rgba(20,60,40,.16);display:grid;gap:2px;text-decoration:none;color:var(--tinta);font-size:.8rem;line-height:1.2}
-.nota-chip strong{font-size:1.35rem;display:flex;align-items:center;gap:6px}
-.nota-chip strong span{color:#E0A100;font-size:1rem;letter-spacing:1px}
-@media (min-width:880px){.nota-chip{right:-22px;top:28px}}
-.hero-foto figcaption{position:absolute;left:14px;bottom:18px;background:rgba(255,255,255,.94);border-radius:12px;padding:8px 12px;font-size:.85rem;line-height:1.35;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.hero-foto figcaption strong{display:block;font-size:.95rem}
-
-/* Seções */
-section{padding-block:56px}
-.titulo-secao{display:grid;gap:10px;margin-bottom:28px;max-width:40em}
-.titulo-secao p{color:#474B50}
+/* Hero com vídeo (mobile first) */
+.hero{display:grid;grid-template-columns:1fr;grid-template-areas:"stack" "body";background:#fff}
+.hero-media{grid-area:stack;position:relative;width:100%;aspect-ratio:4/5;max-height:calc(100svh - 64px);overflow:hidden;background:#d9d2c8 url(video/odontopoli-hero-poster-720.jpg) center/cover}
+.hero-media video{display:block;width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,22,24,0) 35%,rgba(20,22,24,.55) 62%,rgba(20,22,24,.86) 100%);pointer-events:none}
+.hero-head{grid-area:stack;align-self:end;position:relative;z-index:2;padding:0 20px 24px;color:#fff;display:grid;gap:12px}
+.hero-head h1{font-size:clamp(1.85rem,7.4vw,2.9rem);color:#fff}
+.hero-head h1 em{font-style:normal;color:var(--verde-marca)}
+.hero-head .btn{width:100%;margin-top:4px}
+.assinatura{font-family:"Allura","Brush Script MT",cursive;font-size:2rem;line-height:1;color:#fff;margin:0}
+.hero-body{grid-area:body;padding:20px 20px 32px;display:grid;gap:14px;background:linear-gradient(180deg,var(--verde-nevoa),#fff)}
+.hero-body .sub{font-size:1.1rem;color:#3B3F44}
+.hero-body .btn{width:100%}
+.selos{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.95rem;color:#3B3F44}
+.nota-chip{position:absolute;top:14px;right:14px;z-index:3;background:rgba(255,255,255,.95);border-radius:14px;padding:8px 12px;box-shadow:0 8px 24px rgba(0,0,0,.18);display:grid;gap:2px;text-decoration:none;color:var(--tinta);font-size:.78rem;line-height:1.2}
+.nota-chip strong{font-size:1.2rem;display:flex;align-items:center;gap:6px}
+.nota-chip strong span{color:#E0A100;font-size:.9rem;letter-spacing:1px}
+@media (min-width:880px){
+  .hero{max-width:var(--largura);margin-inline:auto;padding:56px var(--gutter) 64px;grid-template-columns:1.05fr .95fr;grid-template-rows:auto 1fr;grid-template-areas:"head media" "body media";column-gap:56px;background:transparent}
+  .hero-media{grid-area:media;border-radius:28px;max-height:none;box-shadow:var(--sombra)}
+  .hero-media::after{display:none}
+  .hero-head{grid-area:head;padding:0;color:var(--tinta);align-self:end}
+  .hero-head h1{color:var(--tinta)}
+  .hero-head h1 em{color:var(--verde)}
+  .assinatura{color:var(--verde)}
+  .hero-head .btn,.hero-body .btn{width:auto;justify-self:start}
+  .hero-body{padding:0;margin-top:22px;background:none;align-content:start}
+}
 
 /* Faixa de confiança */
 .garantias{border-block:1px solid var(--linha);background:#fff;padding-block:18px}
@@ -266,36 +264,30 @@ footer details p{color:#C9CDD1}
 
 <main id="inicio">
   <section class="hero" aria-labelledby="h1">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow">Centro de Guarulhos · Rua Luiz Faccini, 400</p>
-        <h1 id="h1">Seu sorriso nas mãos de <em>especialistas</em>, pertinho de você.</h1>
-        <p class="sub">Marque sua avaliação com o Dr. Lucas e a Dra. Camila escolhendo o dia e o horário aqui mesmo. Leva menos de 1 minuto, e a nossa recepção confirma com você pelo WhatsApp.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primario" href="#agendar" id="cta-hero" data-evento="cta_hero">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-            Escolher dia e horário
-          </a>
-          <a class="btn btn-secundario js-wpp" href="#" data-evento="clique_whatsapp" data-origem="hero">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
-            Falar no WhatsApp
-          </a>
-        </div>
-        <div class="selos">
-          <span>Seg a sex 9h às 18h · Sáb 9h às 12h</span>
-          <span>Dr. Lucas · CRO-SP 96.806</span>
-          <span>Dra. Camila · CRO-SP 96.771</span>
-        </div>
+    <div class="hero-media">
+      <video id="hero-video" muted loop playsinline preload="none" poster="video/odontopoli-hero-poster-720.jpg" aria-label="Vídeo da clínica Odontopoli: recepção, consultório e a Dra. Camila"></video>
+      <a class="nota-chip" href="https://www.google.com/maps/search/?api=1&query=Odontopoli%20Guarulhos&query_place_id=ChIJlYwU9Wj1zpQR8Rowm4plGkI" target="_blank" rel="noopener" data-evento="clique_avaliacoes_google"><strong>5,0 <span aria-hidden="true">★★★★★</span></strong>Avaliação no Google</a>
+    </div>
+    <div class="hero-head">
+      <p class="assinatura">Forma, design e estilo.</p>
+      <h1 id="h1">Seu sorriso nas mãos de <em>especialistas</em>, pertinho de você.</h1>
+      <a class="btn btn-primario" href="#agendar" id="cta-hero" data-evento="cta_hero">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        Escolher dia e horário
+      </a>
+    </div>
+    <div class="hero-body">
+      <p class="eyebrow">Centro de Guarulhos · Rua Luiz Faccini, 400</p>
+      <p class="sub">Marque sua avaliação com o Dr. Lucas e a Dra. Camila escolhendo o dia e o horário aqui mesmo. Leva menos de 1 minuto, e a nossa recepção confirma com você pelo WhatsApp.</p>
+      <a class="btn btn-secundario js-wpp" href="#" data-evento="clique_whatsapp" data-origem="hero">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <div class="selos">
+        <span>Seg a sex 9h às 18h · Sáb 9h às 12h</span>
+        <span>Dr. Lucas · CRO-SP 96.806</span>
+        <span>Dra. Camila · CRO-SP 96.771</span>
       </div>
-      <figure class="hero-foto">
-        <picture>
-          <source srcset="img/doutores.webp" type="image/webp">
-          <img src="img/doutores.jpg" alt="Dra. Camila Hypólito e Dr. Lucas Hypólito no consultório da Odontopoli" width="900" height="918" fetchpriority="high">
-        </picture>
-        <figcaption><strong>Dra. Camila e Dr. Lucas</strong>Cirurgiões-dentistas da Odontopoli</figcaption>
-        <a class="nota-chip" href="https://www.google.com/maps/search/?api=1&query=Odontopoli%20Guarulhos&query_place_id=ChIJlYwU9Wj1zpQR8Rowm4plGkI" target="_blank" rel="noopener" data-evento="clique_avaliacoes_google"><strong>5,0 <span aria-hidden="true">★★★★★</span></strong>Avaliação no Google</a>
-        <svg class="sorriso" viewBox="0 0 400 52" preserveAspectRatio="none" aria-hidden="true"><path d="M8 8 Q200 72 392 8"/></svg>
-      </figure>
     </div>
   </section>
 
@@ -453,7 +445,7 @@ footer details p{color:#C9CDD1}
       </div>
 
       <div class="como">
-        <picture><source srcset="img/conversa.webp" type="image/webp"><img src="img/conversa.jpg" alt="Dra. Camila conversando com uma paciente no consultório" width="800" height="840" loading="lazy"></picture>
+        <picture><source srcset="img/avaliacao.webp" type="image/webp"><img src="img/avaliacao.jpg" alt="Dr. Lucas mostrando a radiografia para a paciente" width="800" height="816" loading="lazy"></picture>
         <div>
           <p class="eyebrow">Como funciona</p>
           <h2 style="margin-top:8px">Da escolha do horário ao plano de tratamento</h2>
@@ -597,6 +589,20 @@ var CONFIG = {
   var wppUrl = "https://wa.me/"+CONFIG.WHATSAPP+"?text="+encodeURIComponent(CONFIG.WHATSAPP_MSG);
   $$(".js-wpp").forEach(function(a){ a.href = wppUrl; a.target="_blank"; a.rel="noopener";
     a.addEventListener("click", function(){ pixel("Contact"); }); });
+
+
+  /* ---------- Vídeo do topo ---------- */
+  (function(){
+    var v = document.getElementById("hero-video"); if (!v) return;
+    var reduz = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var economia = navigator.connection && navigator.connection.saveData;
+    if (reduz || economia) return; // fica só a imagem de capa
+    var grande = window.matchMedia && matchMedia("(min-width: 880px)").matches;
+    v.src = grande ? "video/odontopoli-hero-1080x1350.mp4" : "video/odontopoli-hero-720x900.mp4";
+    if (grande) v.poster = "video/odontopoli-hero-poster.jpg";
+    v.muted = true; v.setAttribute("autoplay", "");
+    var p = v.play(); if (p && p.catch) p.catch(function(){});
+  })();
 
   /* ---------- Barra fixa no celular ---------- */
   var barra = $("#barra"), ctaHero = $("#cta-hero"), secAgenda = $("#agendar");
