@@ -256,6 +256,43 @@ footer details p{color:#C9CDD1}
 .barra .btn{flex:1;min-height:54px;font-size:1.05rem}
 .barra .btn-wpp{flex:0 0 58px;padding:0;background:#25D366;color:#fff}
 @media (min-width:880px){.barra{display:none}}
+
+/* ===== Compactação (v3.3) ===== */
+@media (max-width:879px){ section{padding-block:40px} .titulo-secao{margin-bottom:20px} }
+/* tratamentos em 2x2 no celular */
+@media (max-width:639px){
+  .tratamentos{grid-template-columns:1fr 1fr;gap:10px}
+  .trat{padding:14px;gap:6px}
+  .trat .ico{width:42px;height:42px}
+  .trat .ico svg{width:22px;height:22px}
+  .trat h3{font-size:1rem}
+  .trat p{font-size:.86rem;line-height:1.4}
+  .trat .link{display:none}
+  .tags li{font-size:.85rem;padding:5px 11px}
+}
+/* agenda: passos futuros recolhidos */
+.passo[aria-disabled="true"] .passo-corpo{display:none}
+.passo[aria-disabled="true"] .passo-titulo{margin-bottom:0}
+.passo{padding-top:18px;margin-top:18px}
+/* doutores */
+@media (max-width:639px){ .doutor{grid-template-columns:104px 1fr} .doutor-info{padding:14px 16px;gap:4px} .doutor-info .esp{font-size:.88rem} .doutor-info p{font-size:.9rem} }
+/* galeria do espaço */
+.sec-espaco{padding-top:0}
+.espaco-legenda{margin:0 0 16px;display:grid;gap:6px}
+.galeria{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:thin}
+.galeria figure{flex:0 0 72%;margin:0;scroll-snap-align:start;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1/1}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.92);border-radius:8px;padding:4px 10px;font-size:.85rem;font-weight:500}
+@media (min-width:880px){ .galeria{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible} .galeria figure{aspect-ratio:4/5} .espaco-legenda{grid-template-columns:auto 1fr;align-items:baseline;gap:24px} }
+/* local e dúvidas */
+.local{padding:20px;gap:10px}
+.horas-linha{font-size:1rem;color:#3B3F44;margin:0}
+.local .btns .btn{flex:1 1 120px}
+summary{padding:13px 36px 13px 0}
+footer{padding-block:28px 96px}
+footer .wrap{gap:10px}
+@media (min-width:880px){ footer{padding-block:28px 32px} }
+@media (max-width:879px){.so-desk{display:none}}
 </style>
 </head>
 <body>
@@ -296,7 +333,7 @@ footer details p{color:#C9CDD1}
         Falar no WhatsApp
       </a>
       <div class="selos">
-        <span>Seg a sex 9h às 18h · Sáb 9h às 12h</span>
+        <span class="so-desk">Seg a sex 9h às 18h · Sáb 9h às 12h</span>
         <span>Dr. Lucas · CRO-SP 96.806</span>
         <span>Dra. Camila · CRO-SP 96.771</span>
       </div>
@@ -324,25 +361,25 @@ footer details p{color:#C9CDD1}
         <button class="trat" type="button" data-interesse="Aparelho ortodôntico">
           <span class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 14c3 3 21 3 24 0M4 18c3-3 21-3 24 0"/><rect x="8" y="13" width="3" height="6" rx="1"/><rect x="14.5" y="13" width="3" height="6" rx="1"/><rect x="21" y="13" width="3" height="6" rx="1"/></svg></span>
           <h3>Aparelho ortodôntico</h3>
-          <p>Para dentes tortos, separados ou mordida fora do lugar, em adultos e crianças.</p>
+          <p>Para dentes tortos, separados ou mordida fora do lugar.</p>
           <span class="link">Quero avaliar →</span>
         </button>
         <button class="trat" type="button" data-interesse="Invisalign">
           <span class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12c0 8 5 12 11 12s11-4 11-12c-4 2-18 2-22 0Z" stroke-dasharray="3 2"/><path d="M9 12v4M14 12.5v4.5M18 12.5v4.5M23 12v4"/></svg></span>
           <h3>Alinhadores Invisalign</h3>
-          <p>Placas transparentes que alinham os dentes sem fios nem braquetes, planejadas com escaneamento digital.</p>
+          <p>Alinhadores transparentes, sem fios nem braquetes.</p>
           <span class="link">Quero avaliar →</span>
         </button>
         <button class="trat" type="button" data-interesse="Implante dentário">
           <span class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 5c-3 0-5 2-5 5 0 2 1 3 2 4h18c1-1 2-2 2-4 0-3-2-5-5-5-2 0-3 1-4 1s-2-1-4-1Z"/><path d="M13 14v3h6v-3M12 19h8M13 22h6M14 25h4M15 28h2"/></svg></span>
           <h3>Implantes dentários</h3>
-          <p>Para repor um ou vários dentes perdidos com dentes fixos, planejados a partir de exames de imagem.</p>
+          <p>Dentes fixos para repor um ou vários dentes perdidos.</p>
           <span class="link">Quero avaliar →</span>
         </button>
         <button class="trat" type="button" data-interesse="Estética (lentes, facetas, clareamento)">
           <span class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 13c2 7 18 7 20 0"/><path d="M9 14.5v3M13 15.5v3.5M19 15.5v3.5M23 14.5v3"/><path d="M24 4l1 2.5L27.5 7 25 8l-1 2.5L23 8l-2.5-1L23 6Z" fill="currentColor" stroke="none"/></svg></span>
           <h3>Estética do sorriso</h3>
-          <p>Lentes de contato dental, facetas e clareamento para ajustar cor, forma e tamanho dos dentes com naturalidade.</p>
+          <p>Lentes, facetas e clareamento com resultado natural.</p>
           <span class="link">Quero avaliar →</span>
         </button>
       </div>
@@ -355,7 +392,7 @@ footer details p{color:#C9CDD1}
       <div class="titulo-secao" style="margin-inline:auto;text-align:center">
         <p class="eyebrow">Agendamento online</p>
         <h2 id="h-agenda">Marque sua avaliação em 3 passos</h2>
-        <p>Os horários abaixo são os que estão livres agora na agenda da clínica.</p>
+        <p>Escolha um horário livre. A recepção confirma pelo WhatsApp e a avaliação é com os próprios doutores.</p>
       </div>
       <p class="demo" id="aviso-demo" hidden>Modo demonstração: os horários são de exemplo e nada é gravado. A agenda real entra quando o Google Agenda for conectado.</p>
 
@@ -435,7 +472,7 @@ footer details p{color:#C9CDD1}
       <div class="titulo-secao">
         <p class="eyebrow">Quem vai cuidar de você</p>
         <h2 id="h-dout">Aqui quem avalia o seu caso são os próprios doutores.</h2>
-        <p>A Odontopoli é a clínica do Dr. Lucas e da Dra. Camila Hypólito. Você é atendido por eles do primeiro dia até o fim do tratamento.</p>
+        <p>A Odontopoli é a clínica do Dr. Lucas e da Dra. Camila Hypólito, que atendem você do primeiro dia até o fim do tratamento.</p>
       </div>
       <div class="doutores-grid">
         <article class="doutor">
@@ -444,7 +481,7 @@ footer details p{color:#C9CDD1}
             <h3>Dr. Lucas Hypólito</h3>
             <span class="cro">Cirurgião-dentista · CRO-SP 96.806</span>
             <span class="esp">Especialista em Implantodontia · Especialista em DTM e Dor Orofacial · Mestre em Periodontia</span>
-            <p>Cuida de quem perdeu dentes e quer voltar a mastigar e sorrir com segurança, de quem sofre com dor na mandíbula e na face, e da saúde da gengiva.</p>
+            <p>Implantes, dor na mandíbula e na face e saúde da gengiva.</p>
           </div>
         </article>
         <article class="doutor">
@@ -453,37 +490,25 @@ footer details p{color:#C9CDD1}
             <h3>Dra. Camila Hypólito</h3>
             <span class="cro">Cirurgiã-dentista · CRO-SP 96.771</span>
             <span class="esp">Especialista em Ortodontia · Especialista em Prótese Dentária · Atualização em Harmonização Orofacial</span>
-            <p>Alinha dentes com aparelho ou alinhadores transparentes e reabilita sorrisos com próteses, lentes e facetas, sempre buscando um resultado natural.</p>
+            <p>Aparelhos, Invisalign, próteses, lentes e facetas com resultado natural.</p>
           </div>
         </article>
       </div>
 
-      <div class="como">
-        <picture><source srcset="img/avaliacao.webp" type="image/webp"><img src="img/avaliacao.jpg" alt="Dr. Lucas mostrando a radiografia para a paciente" width="800" height="816" loading="lazy"></picture>
-        <div>
-          <p class="eyebrow">Como funciona</p>
-          <h2 style="margin-top:8px">Da escolha do horário ao plano de tratamento</h2>
-          <ol class="passos-lista">
-            <li><div><strong>Você escolhe o dia e o horário</strong>Aqui mesmo nesta página, sem precisar ligar.</div></li>
-            <li><div><strong>A recepção confirma pelo WhatsApp</strong>E manda a localização para facilitar a sua chegada.</div></li>
-            <li><div><strong>Avaliação com os doutores</strong>Eles examinam com calma, mostram os exames e explicam as opções com palavras simples. Você decide com tranquilidade.</div></li>
-          </ol>
-          <a class="btn btn-primario btn-como" href="#agendar" data-evento="cta_doutores">Agendar minha avaliação</a>
-        </div>
-      </div>
     </div>
   </section>
 
-  <section aria-labelledby="h-espaco" style="padding-top:0">
+  <section aria-labelledby="h-espaco" class="sec-espaco">
     <div class="wrap">
-      <div class="espaco">
-        <figure class="e1"><picture><source srcset="img/recepcao.webp" type="image/webp"><img src="img/recepcao.jpg" alt="Recepção da Odontopoli com poltronas de couro e piso de madeira" width="1000" height="667" loading="lazy"></picture></figure>
-        <figure class="e2"><picture><source srcset="img/parede.webp" type="image/webp"><img src="img/parede.jpg" alt="Frase na parede da recepção: Forma, design e estilo. Isso define o seu sorriso." width="700" height="766" loading="lazy"></picture></figure>
-        <figure class="e3"><picture><source srcset="img/consultorio.webp" type="image/webp"><img src="img/consultorio.jpg" alt="Consultório da Odontopoli" width="900" height="600" loading="lazy"></picture></figure>
-      </div>
       <div class="espaco-legenda">
         <h2 id="h-espaco">Um espaço feito para você ficar à vontade</h2>
-        <p>Recepção aconchegante, consultórios claros e atendimento com hora marcada, sem sala de espera cheia.</p>
+        <p>Recepção aconchegante, consultórios claros e atendimento com hora marcada.</p>
+      </div>
+      <div class="galeria" tabindex="0" aria-label="Fotos da clínica. Arraste para o lado.">
+        <figure><picture><source srcset="img/recepcao.webp" type="image/webp"><img src="img/recepcao.jpg" alt="Recepção da Odontopoli com poltronas de couro e piso de madeira" width="1000" height="667" loading="lazy"></picture><figcaption>Recepção</figcaption></figure>
+        <figure><picture><source srcset="img/avaliacao.webp" type="image/webp"><img src="img/avaliacao.jpg" alt="Dr. Lucas mostrando a radiografia para a paciente" width="800" height="816" loading="lazy"></picture><figcaption>Avaliação com os doutores</figcaption></figure>
+        <figure><picture><source srcset="img/consultorio.webp" type="image/webp"><img src="img/consultorio.jpg" alt="Consultório da Odontopoli" width="900" height="600" loading="lazy"></picture><figcaption>Consultório</figcaption></figure>
+        <figure><picture><source srcset="img/parede.webp" type="image/webp"><img src="img/parede.jpg" alt="Frase na parede da recepção: Forma, design e estilo. Isso define o seu sorriso." width="700" height="766" loading="lazy"></picture><figcaption>Forma, design e estilo</figcaption></figure>
       </div>
     </div>
   </section>
@@ -502,11 +527,7 @@ footer details p{color:#C9CDD1}
       <aside class="local" aria-labelledby="h-local">
         <h3 id="h-local">Onde estamos</h3>
         <address>Rua Luiz Faccini, 400<br>Centro · Guarulhos · SP</address>
-        <table class="horario" aria-label="Horário de atendimento">
-          <tr><td>Segunda a sexta</td><td>9h às 18h</td></tr>
-          <tr><td>Sábado</td><td>9h às 12h</td></tr>
-          <tr><td>Domingo</td><td>Fechado</td></tr>
-        </table>
+        <p class="horas-linha">Seg a sex, 9h às 18h · Sáb, 9h às 12h</p>
         <div class="btns">
           <a class="btn btn-secundario" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Luiz%20Faccini%2C%20400%2C%20Guarulhos%20SP" target="_blank" rel="noopener" data-evento="clique_rota">Google Maps</a>
           <a class="btn btn-secundario" href="https://waze.com/ul?q=Rua%20Luiz%20Faccini%20400%20Guarulhos&navigate=yes" target="_blank" rel="noopener" data-evento="clique_rota_waze">Waze</a>
