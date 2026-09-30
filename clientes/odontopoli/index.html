@@ -4,7 +4,7 @@
 <title>Odontopoli Guarulhos</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Clínica odontológica no Centro de Guarulhos. Ortodontia, Invisalign, implantes e estética do sorriso com o Dr. Lucas e a Dra. Camila Hypólito. Agende sua avaliação online.">
+<meta name="description" content="Clínica odontológica no Centro de Guarulhos. Ortodontia, Invisalign, implantes, prótese, DTM, ronco e apneia e estética do sorriso com o Dr. Lucas e a Dra. Camila Hypólito. Agende sua avaliação online.">
 <!-- Durante a aprovação na pasta da E4T, manter noindex. Remover quando subir em odontopoli.com.br -->
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Odontopoli · Odontologia Especializada em Guarulhos">
@@ -106,6 +106,13 @@ p{margin:0}
   .hero-body{padding:0;margin-top:22px;background:none;align-content:start}
 }
 
+/* Seções */
+section{padding-block:56px}
+.hero{padding-block:0}
+@media (min-width:880px){.hero{padding-block:56px 64px}}
+.titulo-secao{display:grid;gap:10px;margin-bottom:28px;max-width:40em}
+.titulo-secao p{color:#474B50}
+
 /* Faixa de confiança */
 .garantias{border-block:1px solid var(--linha);background:#fff;padding-block:18px}
 .garantias ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
@@ -126,7 +133,12 @@ p{margin:0}
 .trat .ico svg{width:28px;height:28px}
 .trat p{font-size:1rem;color:#474B50}
 .trat .link{margin-top:auto;font-weight:600;color:var(--verde);font-size:1rem}
-.tambem{margin-top:18px;font-size:1rem;color:#474B50}
+.tambem{margin-top:22px;font-size:1rem;color:#474B50}
+.tambem p{margin-bottom:10px;font-weight:500;color:var(--tinta)}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{background:var(--verde-nevoa);color:var(--verde-escuro);border-radius:999px;padding:6px 14px;font-size:.95rem}
+.btn-como{margin-top:26px;width:100%}
+@media (min-width:880px){.btn-como{width:auto;margin-left:52px}}
 
 /* Agendamento */
 #agendar{background:var(--verde-nevoa)}
@@ -295,7 +307,7 @@ footer details p{color:#C9CDD1}
   <div class="garantias" aria-label="Diferenciais">
     <div class="wrap"><ul>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5"/></svg><div><strong>Avaliação com os doutores</strong><span>Quem avalia é quem vai tratar</span></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5Z"/><path d="M7 11.5V16c0 1.5 2.2 3 5 3s5-1.5 5-3v-4.5M21 9v5"/></svg><div><strong>Doutorado em Odontologia</strong><span>Formação do Dr. Lucas</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5Z"/><path d="M7 11.5V16c0 1.5 2.2 3 5 3s5-1.5 5-3v-4.5M21 9v5"/></svg><div><strong>Especialistas e mestre</strong><span>Implante, DTM, ortodontia e prótese</span></div></li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 11c1.5-2 3-3 5-3s3.5 1 5 3"/></svg><div><strong>Escaneamento digital</strong><span>Planejamento do sorriso em 3D</span></div></li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><strong>Centro de Guarulhos</strong><span>Rua Luiz Faccini, 400</span></div></li>
     </ul></div>
@@ -334,7 +346,7 @@ footer details p{color:#C9CDD1}
           <span class="link">Quero avaliar →</span>
         </button>
       </div>
-      <p class="tambem">Também atendemos periodontia (gengiva), dor na mandíbula (ATM), ronco e apneia do sono, harmonização facial e clínica geral.</p>
+      <div class="tambem"><p>Também cuidamos de:</p><ul class="tags"><li>Dor na mandíbula e na face (DTM)</li><li>Ronco e apneia do sono</li><li>Ozonioterapia</li><li>Gengiva (periodontia)</li><li>Próteses e reabilitação oral</li><li>Harmonização orofacial</li><li>Clínica geral</li></ul></div>
     </div>
   </section>
 
@@ -429,8 +441,8 @@ footer details p{color:#C9CDD1}
           <div class="doutor-info">
             <h3>Dr. Lucas Hypólito</h3>
             <span class="cro">Cirurgião-dentista · CRO-SP 96.806</span>
-            <span class="esp">Doutorado em Odontologia · <span class="confirmar">Implantodontia e reabilitação oral</span></span>
-            <p class="confirmar">Cuida de quem perdeu dentes e quer voltar a mastigar e sorrir com segurança, com planejamento feito a partir de exames de imagem.</p>
+            <span class="esp">Especialista em Implantodontia · Especialista em DTM e Dor Orofacial · Mestre em Periodontia</span>
+            <p>Cuida de quem perdeu dentes e quer voltar a mastigar e sorrir com segurança, de quem sofre com dor na mandíbula e na face, e da saúde da gengiva.</p>
           </div>
         </article>
         <article class="doutor">
@@ -438,8 +450,8 @@ footer details p{color:#C9CDD1}
           <div class="doutor-info">
             <h3>Dra. Camila Hypólito</h3>
             <span class="cro">Cirurgiã-dentista · CRO-SP 96.771</span>
-            <span class="esp confirmar">Ortodontia, Invisalign e estética do sorriso</span>
-            <p class="confirmar">Alinha dentes com aparelho ou alinhadores transparentes e desenha sorrisos com lentes, facetas e clareamento, sempre buscando um resultado natural.</p>
+            <span class="esp">Especialista em Ortodontia · Especialista em Prótese Dentária · Atualização em Harmonização Orofacial</span>
+            <p>Alinha dentes com aparelho ou alinhadores transparentes e reabilita sorrisos com próteses, lentes e facetas, sempre buscando um resultado natural.</p>
           </div>
         </article>
       </div>
@@ -454,7 +466,7 @@ footer details p{color:#C9CDD1}
             <li><div><strong>A recepção confirma pelo WhatsApp</strong>E manda a localização para facilitar a sua chegada.</div></li>
             <li><div><strong>Avaliação com os doutores</strong>Eles examinam com calma, mostram os exames e explicam as opções com palavras simples. Você decide com tranquilidade.</div></li>
           </ol>
-          <a class="btn btn-primario" href="#agendar" style="margin-top:26px" data-evento="cta_doutores">Agendar minha avaliação</a>
+          <a class="btn btn-primario btn-como" href="#agendar" data-evento="cta_doutores">Agendar minha avaliação</a>
         </div>
       </div>
     </div>
@@ -508,7 +520,7 @@ footer details p{color:#C9CDD1}
     <p>Odontopoli Serviços Odontológicos Ltda · CNPJ 44.569.916/0001-32<br>
     Rua Luiz Faccini, 400, Centro, Guarulhos/SP · (11) 4307-9802<br>
     Dr. Lucas Hypólito, CRO-SP 96.806 · Dra. Camila Hypólito, CRO-SP 96.771<br>
-    Responsável técnica: <span class="confirmar">Dra. Camila Hypólito, CRO-SP 96.771</span> · Inscrição da clínica: <span class="confirmar">CRO-SP EPAO 00000</span><br>
+    Responsável técnica: Dra. Camila Hypólito, CRO-SP 96.771 · Inscrição da clínica: CRO-SP EPAO 026350<br>
     <a href="https://www.instagram.com/odonto.poli/" target="_blank" rel="noopener" data-evento="clique_instagram">Instagram @odonto.poli</a></p>
     <details id="privacidade"><summary>Política de privacidade</summary>
       <p>Os dados enviados neste site (nome, WhatsApp e o tratamento de interesse) são usados apenas pela Odontopoli para confirmar, lembrar e organizar a sua consulta, e para melhorar a divulgação da clínica. Não vendemos nem compartilhamos seus dados com terceiros além das ferramentas que usamos para isso (Google e Meta). Você pode pedir a exclusão dos seus dados a qualquer momento pelo WhatsApp (11) 4307-9802. Este site usa cookies de medição de anúncios.</p>
