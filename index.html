@@ -625,7 +625,7 @@ src="https://www.facebook.com/tr?id=1448130467134895&ev=PageView&noscript=1"
     <div class="offer-copy reveal">
       <div class="eyebrow">Próximo passo</div>
       <h2>Diagnóstico estratégico gratuito, sem compromisso</h2>
-      <p>Responda 7 perguntas rápidas sobre o seu negócio. Nosso time analisa sua operação e te chama no WhatsApp com um raio-x inicial: onde você está perdendo cliente e por onde começar.</p>
+      <p>Responda 8 perguntas rápidas sobre o seu negócio. Nosso time analisa sua operação e te chama no WhatsApp com um raio-x inicial: onde você está perdendo cliente e por onde começar.</p>
       <ul class="offer-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Leva menos de 2 minutos para preencher.</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Retorno em até 1 dia útil, direto no seu WhatsApp.</li>
@@ -688,6 +688,18 @@ src="https://www.facebook.com/tr?id=1448130467134895&ev=PageView&noscript=1"
             <option>R$ 1.500 a R$ 3.000</option>
             <option>R$ 3.000 a R$ 6.000</option>
             <option>Acima de R$ 6.000</option>
+          </select>
+        </div>
+
+        <div class="f-row">
+          <label for="faixa_faturamento">Faturamento médio mensal da empresa</label>
+          <select id="faixa_faturamento" name="faixa_faturamento" required>
+            <option value="" disabled selected>Selecione uma faixa</option>
+            <option>Até R$ 20 mil</option>
+            <option>R$ 20 a 50 mil</option>
+            <option>R$ 50 a 100 mil</option>
+            <option>R$ 100 a 300 mil</option>
+            <option>Acima de R$ 300 mil</option>
           </select>
         </div>
 
@@ -777,7 +789,7 @@ src="https://www.facebook.com/tr?id=1448130467134895&ev=PageView&noscript=1"
   </div>
 </footer>
 
-<a id="waFloat" class="wa-float" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<a id="waFloat" class="wa-float" href="#diagnostico" aria-label="Quero meu diagnóstico gratuito">
   <svg viewBox="0 0 32 32" fill="#fff"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.5.75 4.83 2.03 6.78L4 29l7.4-1.98a11.9 11.9 0 004.62.92h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 21.9c-1.62 0-3.2-.43-4.57-1.25l-.33-.19-3.9 1.05 1.04-3.8-.21-.35a9.8 9.8 0 01-1.5-5.24c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 012.9 6.98c0 5.45-4.43 9.87-9.89 9.87zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.48-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.45 1.06 2.86 1.21 3.06.15.2 2.09 3.2 5.08 4.48.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
 </a>
 
@@ -792,8 +804,8 @@ const WHATSAPP_NUMBER = "5511976661914";
 const CRM_LEAD_ENDPOINT = "https://e4tcrm.lovable.app/api/public/leads";
 const CRM_LEAD_API_KEY = "65bbf994d111b4dbba1cd1652f549c15da1efcab537034f02713cd03335606d0";
 
-/* WhatsApp float button base link */
-document.getElementById('waFloat').href = "https://wa.me/" + WHATSAPP_NUMBER.replace(/\D/g,'') + "?text=" + encodeURIComponent("Olá! Vim pela landing page da E4T e quero saber mais sobre gestão de tráfego pago.");
+/* Botão flutuante leva ao formulário (#diagnostico), não abre o WhatsApp direto,
+   pra todo contato passar pela qualificação antes. */
 
 /* FAQ accordion */
 document.querySelectorAll('.faq-item').forEach(function(item){
@@ -851,6 +863,7 @@ form.addEventListener('submit', function(e){
     tipoNegocio: document.getElementById('tipoNegocio').value,
     desafio: document.getElementById('desafio').value,
     investimento: document.getElementById('investimento').value,
+    faixa_faturamento: document.getElementById('faixa_faturamento').value,
     cidade: document.getElementById('cidade').value.trim(),
     pageUrl: window.location.href,
     timestamp: new Date().toISOString(),
@@ -894,6 +907,7 @@ form.addEventListener('submit', function(e){
     cidade: data.cidade,
     dor_principal: data.desafio,
     faixa_investimento: data.investimento,
+    faixa_faturamento: data.faixa_faturamento,
     ja_investe_trafego: ja_investe_trafego,
     utm_source: data.utm_source,
     utm_medium: data.utm_medium,
@@ -921,6 +935,7 @@ Negócio: ${data.negocio}
 Tipo de negócio: ${data.tipoNegocio}
 Maior desafio: ${data.desafio}
 Investimento mensal disponível: ${data.investimento}
+Faturamento médio mensal: ${data.faixa_faturamento}
 Cidade/bairro: ${data.cidade}`;
 
     const waNumber = WHATSAPP_NUMBER.replace(/\D/g,'');
