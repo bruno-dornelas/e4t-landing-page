@@ -261,6 +261,7 @@ body.idle .topbar.menu-open{opacity:1;transform:none}
 /* =========================================================
    SLIDE 1 · CAPA
    ========================================================= */
+.s-cover .cover-txt{display:contents}
 .s-cover .left{position:absolute;left:0;top:0;bottom:0;width:50%;background:#fff}
 .s-cover .right{position:absolute;right:0;top:0;bottom:0;width:50%}
 .s-cover .right img{object-position:60% 30%}
@@ -570,17 +571,28 @@ body.idle .topbar.menu-open{opacity:1;transform:none}
   .stripes{height:28px}
 
   /* capa */
-  .s-cover .left{width:100%;top:46%;bottom:0}
-  .s-cover .right{width:100%;top:0;bottom:54%}
+  .s-cover .left{display:none}
+  .s-cover .right{width:100%;top:0;bottom:auto;height:52%}
   .s-cover .right img{object-position:62% 22%}
   .s-cover .band.eyes{left:0;width:100%;top:30%;height:21%}
   .s-cover .vline{display:none}
-  .s-cover .flame{left:22px;top:auto;bottom:calc(54% - 28px);width:56px;z-index:4}
-  .s-cover .word{left:22px;top:52%;font-size:clamp(46px,15vw,72px)}
-  .s-cover .tag{left:22px;top:64%}
-  .s-cover .tag .txt{font-size:14px;padding-top:26px}
-  .s-cover .tag .vbar{height:58px}
-  .s-cover .bottom{left:22px;right:22px;max-width:none;bottom:calc(var(--bar) + 22px)}
+  .s-cover .flame{left:22px;top:calc(52% - 28px);width:56px;z-index:4}
+  .s-cover .cover-txt{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:52%;bottom:0;background:#fff;padding:40px 22px calc(var(--bar) + 14px);z-index:3;overflow:hidden}
+  .s-cover .word,.s-cover .tag,.s-cover .bottom{position:static;left:auto;top:auto;bottom:auto;right:auto;max-width:none}
+  .s-cover .word{font-size:clamp(40px,13vw,64px);letter-spacing:.38em}
+  .s-cover .tag{margin-top:14px;gap:12px}
+  .s-cover .tag .txt{font-size:13px;padding-top:0;align-self:center}
+  .s-cover .tag .vbar{height:38px}
+  .s-cover .bottom{margin-top:auto;padding-top:16px}
+  .s-cover .para{font-size:15px;line-height:1.35;margin-top:8px}
+  .s-cover .start{display:none}
+  .s-cover .flame{z-index:5}
+  @media (max-height:640px){
+    .s-cover .right{height:44%}
+    .s-cover .cover-txt{top:44%;padding-top:34px}
+    .s-cover .flame{top:calc(44% - 26px);width:52px}
+    .s-cover .word{font-size:clamp(36px,11vw,52px)}
+  }
 
   /* gancho */
   .s-hook .pad{display:flex !important;flex-direction:column;justify-content:center}
@@ -796,12 +808,14 @@ body.print .pad,body.print .grid,body.print .content,body.print .scroll{overflow
   </div>
   <span class="vline a wipe-v" style="--d:.9"></span>
   <img class="flame a" style="--d:.2" src="img/flame.png" alt="Símbolo E4T">
+  <div class="cover-txt">
   <div class="word a" style="--d:1.1">E4T</div>
   <div class="tag a" style="--d:1.35"><span class="vbar"></span><span class="txt">Agência de marketing<br>e publicidade</span></div>
   <div class="bottom">
     <div class="years a" style="--d:1.6">25 anos de mercado publicitário</div>
     <p class="para a" id="paraCover" style="--d:1.75" hidden>Apresentação preparada para <strong class="js-nome"></strong></p>
     <div class="start a" style="--d:1.9"><span class="pulse"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></span>Clique para começar</div>
+  </div>
   </div>
 </section>
 
