@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>E4T | Uma apresentação feita para o seu negócio</title>
+<meta name="description" content="Por que seu concorrente aparece primeiro? Em poucos minutos, a E4T mostra como transformar anúncio em cliente na porta. 25 anos de mercado publicitário.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://e4tmkt.com/bemvindos/">
+<meta name="theme-color" content="#0a0a0a">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="E4T Marketing e Publicidade">
+<meta property="og:title" content="Por que seu concorrente aparece primeiro?">
+<meta property="og:description" content="Separamos uma apresentação rápida para o seu negócio. Abra e descubra onde estão os clientes que ainda não chegaram até você.">
+<meta property="og:url" content="https://e4tmkt.com/bemvindos/">
+<meta property="og:image" content="https://e4tmkt.com/bemvindos/og-bemvindos.jpg">
+<meta property="og:image:secure_url" content="https://e4tmkt.com/bemvindos/og-bemvindos.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Por que seu concorrente aparece primeiro? Apresentação da E4T Marketing e Publicidade.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Por que seu concorrente aparece primeiro?">
+<meta name="twitter:image" content="https://e4tmkt.com/bemvindos/og-bemvindos.jpg">
+
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="fonts/oswald-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/mulher.jpg" as="image">
+
+<style>
+@font-face{font-family:'Oswald';font-weight:500;font-display:swap;src:url(fonts/oswald-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Oswald';font-weight:600;font-display:swap;src:url(fonts/oswald-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Oswald';font-weight:700;font-display:swap;src:url(fonts/oswald-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:300;font-display:swap;src:url(fonts/inter-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-weight:700;font-display:swap;src:url(fonts/inter-latin-700-normal.woff2) format('woff2')}
+
+:root{
+  --red:#e30613;
+  --red-dark:#b30510;
+  --black:#0a0a0a;
+  --ink:#141414;
+  --gray:#c6c6c6;
+  --gray-2:#e9e7e3;
+  --paper:#f6f5f2;
+  --muted:#6b6b6b;
+  --white:#fff;
+  --head:'Oswald',Impact,'Arial Narrow',sans-serif;
+  --body-f:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --ease:cubic-bezier(.2,.75,.2,1);
+
+  /* unidade base proporcional a um palco 16:9 */
+  --u:min(1vw,1.78vh);
+  --h1:calc(var(--u)*4.4);
+  --h2:calc(var(--u)*3.15);
+  --h3:max(17px,calc(var(--u)*1.55));
+  --body:max(14px,calc(var(--u)*1.08));
+  --small:max(12.5px,calc(var(--u)*.86));
+  --eyebrow:max(11px,calc(var(--u)*.78));
+  --padx:calc(var(--u)*6);
+  --pady:calc(var(--u)*6.4);
+  --bar:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+html,body{height:100%;background:var(--black)}
+body{
+  font-family:var(--body-f);color:var(--ink);
+  overflow:hidden;-webkit-font-smoothing:antialiased;
+  font-size:var(--body);line-height:1.55;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;-webkit-user-select:none;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+strong{font-weight:700}
+.red{color:var(--red)}
+
+/* ===================== ESTRUTURA ===================== */
+.stage{position:fixed;inset:0;overflow:hidden;cursor:pointer}
+.slide{
+  position:absolute;inset:0;
+  opacity:0;visibility:hidden;
+  transition:opacity .7s var(--ease),visibility 0s linear .7s;
+  overflow:hidden;
+}
+.slide.active{opacity:1;visibility:visible;transition:opacity .7s var(--ease),visibility 0s}
+.slide.light{background:var(--white);color:var(--ink)}
+.slide.paper{background:var(--paper);color:var(--ink)}
+.slide.dark{background:var(--black);color:#fff}
+.slide.redbg{background:var(--red);color:#fff}
+.pad{position:absolute;inset:0;padding:var(--pady) var(--padx)}
+
+/* ===================== TIPOGRAFIA ===================== */
+.eyebrow{
+  font-family:var(--head);font-weight:600;font-size:var(--eyebrow);
+  letter-spacing:.2em;text-transform:uppercase;color:var(--red);
+  display:flex;align-items:center;gap:.9em;margin-bottom:1.6em;
+}
+.eyebrow::before{content:'';width:2.2em;height:3px;background:currentColor}
+.dark .eyebrow,.redbg .eyebrow{color:var(--red)}
+.redbg .eyebrow{color:#fff}
+.h1,.h2,.h3{font-family:var(--head);text-transform:uppercase;line-height:1.04;letter-spacing:.005em;font-weight:600}
+.h1{font-size:var(--h1)}
+.h2{font-size:var(--h2)}
+.h3{font-size:var(--h3);letter-spacing:.06em;line-height:1.2}
+.lead{font-size:calc(var(--body)*1.18);line-height:1.55;font-weight:300}
+.dark .lead{color:#d9d9d9}
+.small{font-size:var(--small)}
+.label{font-family:var(--head);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:var(--small)}
+
+/* ===================== MOTIVOS VISUAIS ===================== */
+.stripes{background:repeating-linear-gradient(90deg,var(--red) 0 2px,transparent 2px 9px);height:calc(var(--u)*4.6)}
+.photo{position:relative;overflow:hidden;background:#222}
+.photo img{width:100%;height:100%;object-fit:cover}
+.bw img{filter:grayscale(1) contrast(1.06)}
+.band{position:absolute;background:var(--red);mix-blend-mode:screen;pointer-events:none}
+.band.solid{mix-blend-mode:normal;opacity:.92}
+.vbar{width:max(5px,calc(var(--u)*.55));background:var(--black);align-self:stretch;flex:none}
+.redbar{background:var(--red)}
+.outline-num{
+  font-family:var(--head);font-weight:700;line-height:.8;
+  color:transparent;-webkit-text-stroke:2px var(--red);
+}
+
+/* ===================== ANIMAÇÕES ===================== */
+/* .a = entra sozinho quando o slide abre  |  .f = entra no clique */
+.a,.f{transition:opacity .8s var(--ease),transform .9s var(--ease),clip-path 1s var(--ease);will-change:opacity,transform}
+.a{opacity:0;transform:translateY(28px);transition-delay:calc(var(--d,0)*1s)}
+.slide.active .a{opacity:1;transform:none}
+.f{opacity:0;transform:translateY(22px)}
+.f.on{opacity:1;transform:none}
+.a.fade,.f.fade{transform:none}
+.a.left,.f.left{transform:translateX(-40px)}
+.a.right,.f.right{transform:translateX(40px)}
+.a.zoom{transform:scale(1.12);transition-duration:1.4s,1.8s}
+.a.wipe,.f.wipe{transform:scaleX(0);transform-origin:left center;transition-duration:.6s,1s}
+.a.wipe-v{transform:scaleY(0);transform-origin:center top}
+.slide.active .a.wipe,.f.wipe.on,.slide.active .a.wipe-v{transform:none}
+.a.reveal{clip-path:inset(0 100% 0 0);transform:none;opacity:1}
+.slide.active .a.reveal{clip-path:inset(0 0 0 0)}
+.f.pop{transform:scale(.9)}
+.f.pop.on{transform:none}
+.f.on.highlight{animation:hl 1.2s var(--ease) .3s both}
+@keyframes hl{0%{background-size:0 100%}100%{background-size:100% 100%}}
+.mark{background:linear-gradient(var(--red),var(--red)) no-repeat 0 100%/100% 100%;color:#fff;padding:0 .18em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+/* ===================== BARRA SUPERIOR ===================== */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:30;height:var(--bar);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 max(16px,calc(var(--u)*2.4));
+  padding-top:env(safe-area-inset-top);
+  transition:opacity .5s,transform .5s;
+  pointer-events:none;
+}
+.topbar > *{pointer-events:auto}
+body.idle .topbar{opacity:0;transform:translateY(-10px)}
+body.idle .topbar.menu-open{opacity:1;transform:none}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:600;letter-spacing:.32em;font-size:15px;transition:color .4s}
+.brand img{width:30px;height:31px}
+.on-dark .brand{color:#fff}
+.at-cover .brand{opacity:0;pointer-events:none}
+.brand-ink .brand{color:var(--ink)}
+.at-cover .hint{color:var(--muted)}
+.tools{display:flex;align-items:center;gap:8px;position:relative}
+.tbtn{
+  display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;
+  border-radius:999px;font-size:13px;font-weight:500;letter-spacing:.01em;
+  background:rgba(10,10,10,.06);color:var(--ink);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(10,10,10,.1);transition:background .2s,color .2s,border-color .2s;
+}
+.tbtn svg{width:17px;height:17px;flex:none}
+.tbtn:hover{background:var(--black);color:#fff;border-color:var(--black)}
+.on-dark .tbtn{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.16)}
+.on-dark .tbtn:hover{background:#fff;color:var(--black)}
+.tbtn.primary{background:var(--red);color:#fff;border-color:var(--red)}
+.tbtn.primary:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff}
+.on-red .tbtn.primary{background:#fff;color:var(--red);border-color:#fff}
+.tbtn.icon{width:40px;padding:0;justify-content:center}
+
+.menu{
+  position:absolute;top:50px;right:0;min-width:250px;
+  background:#fff;color:var(--ink);border-radius:14px;padding:8px;
+  box-shadow:0 24px 60px -12px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.06);
+  opacity:0;transform:translateY(-6px) scale(.98);transform-origin:top right;
+  pointer-events:none;transition:opacity .2s,transform .2s;
+}
+.menu.open{opacity:1;transform:none;pointer-events:auto}
+.menu p{font-family:var(--head);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:8px 12px 6px}
+.menu a,.menu button{display:flex;align-items:center;gap:12px;width:100%;padding:11px 12px;border-radius:9px;font-size:14px;font-weight:500;text-align:left}
+.menu a:hover,.menu button:hover{background:var(--paper)}
+.menu svg{width:20px;height:20px;flex:none}
+.menu .wa svg{color:#25d366}
+.menu hr{border:0;border-top:1px solid #eee;margin:6px 4px}
+
+/* ===================== CONTROLES INFERIORES ===================== */
+.controls{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;height:var(--bar);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 max(16px,calc(var(--u)*2.4));padding-bottom:env(safe-area-inset-bottom);
+  pointer-events:none;
+}
+.controls > *{pointer-events:auto}
+.nav{display:flex;align-items:center;gap:6px}
+.cbtn{
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(10,10,10,.06);border:1px solid rgba(10,10,10,.12);color:var(--ink);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:all .2s;
+}
+.cbtn svg{width:18px;height:18px}
+.cbtn:hover{background:var(--black);color:#fff}
+.cbtn.next{background:var(--red);border-color:var(--red);color:#fff}
+.cbtn.next:hover{background:var(--red-dark)}
+.cbtn:disabled{opacity:.3;pointer-events:none}
+.on-dark .cbtn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff}
+.on-dark .cbtn:hover{background:#fff;color:var(--black)}
+.on-dark .cbtn.next{background:var(--red);border-color:var(--red);color:#fff}
+.on-red .cbtn.next{background:#fff;border-color:#fff;color:var(--red)}
+.counter{font-family:var(--head);font-weight:500;letter-spacing:.14em;font-size:13px;min-width:74px;text-align:center;color:var(--ink)}
+.counter b{color:var(--red);font-weight:600}
+.on-dark .counter{color:#fff}
+.on-red .counter,.on-red .counter b{color:#fff}
+.hint{font-size:12px;color:var(--muted);letter-spacing:.02em;display:flex;align-items:center;gap:10px;transition:opacity .6s}
+.on-dark .hint{color:#9a9a9a}
+.on-red .hint{color:rgba(255,255,255,.8)}
+.hint kbd{font-family:var(--body-f);font-size:11px;border:1px solid currentColor;border-radius:4px;padding:1px 6px;opacity:.8}
+.hint.gone{opacity:0}
+.progress{position:fixed;left:0;bottom:0;height:3px;background:var(--red);z-index:31;transition:width .6s var(--ease);width:0}
+.on-red .progress{background:#fff}
+.pulse{position:relative}
+.pulse::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--red);animation:pulse 2s infinite;pointer-events:none}
+@keyframes pulse{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+
+.toast{position:fixed;left:50%;bottom:86px;transform:translate(-50%,20px);background:var(--black);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;z-index:40;opacity:0;transition:all .3s;pointer-events:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ===================== BOTÕES DE CONTEÚDO ===================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  font-family:var(--head);font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  font-size:max(14px,calc(var(--u)*1.05));padding:1.15em 2em;border-radius:4px;
+  transition:transform .2s,background .2s,color .2s;white-space:nowrap;
+}
+.btn svg{width:1.3em;height:1.3em}
+.btn:hover{transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--red)}
+.btn-white:hover{background:var(--black);color:#fff}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--red)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+
+/* =========================================================
+   SLIDE 1 · CAPA
+   ========================================================= */
+.s-cover .left{position:absolute;left:0;top:0;bottom:0;width:50%;background:#fff}
+.s-cover .right{position:absolute;right:0;top:0;bottom:0;width:50%}
+.s-cover .right img{object-position:60% 30%}
+.s-cover .flame{position:absolute;left:calc(var(--u)*5.2);top:calc(var(--u)*5.2);width:calc(var(--u)*7.3)}
+.s-cover .band.eyes{left:-2%;top:24.5%;height:13.4%;width:78.5%}
+.s-cover .vline{position:absolute;left:49%;top:24.5%;height:13.4%;width:calc(var(--u)*.9);background:var(--red);z-index:2}
+.s-cover .word{
+  position:absolute;left:41%;top:47%;z-index:3;
+  font-family:var(--body-f);font-weight:700;color:var(--red);
+  font-size:calc(var(--u)*7.6);letter-spacing:.42em;line-height:1;
+}
+.s-cover .tag{position:absolute;left:26.2%;top:57.6%;display:flex;gap:calc(var(--u)*1.6);align-items:stretch}
+.s-cover .tag .txt{color:var(--red);font-size:calc(var(--u)*1.12);line-height:1.35;text-transform:uppercase;letter-spacing:.02em;padding:calc(var(--u)*4.2) 0 0}
+.s-cover .tag .vbar{height:calc(var(--u)*6.5)}
+.s-cover .bottom{position:absolute;left:calc(var(--u)*5.2);bottom:calc(var(--u)*5.6);max-width:38%}
+.s-cover .years{font-family:var(--head);font-size:var(--small);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+.s-cover .years::before{content:'';width:28px;height:2px;background:var(--red)}
+.s-cover .para{margin-top:14px;font-size:calc(var(--body)*1.05);color:var(--ink)}
+.s-cover .para strong{color:var(--red)}
+.s-cover .start{
+  margin-top:calc(var(--u)*2.2);display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--head);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:var(--small);color:var(--ink);
+}
+.s-cover .start span{width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center}
+.s-cover .start svg{width:16px;height:16px}
+
+/* =========================================================
+   SLIDE 2 · GANCHO
+   ========================================================= */
+.s-hook .bg{position:absolute;inset:0;opacity:.32}
+.s-hook .bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1) brightness(.7)}
+.s-hook .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--black) 30%,rgba(10,10,10,.4))}
+.s-hook .pad{display:flex;flex-direction:column;justify-content:center}
+.s-hook .h1{max-width:17ch;font-size:calc(var(--u)*5.1)}
+.s-hook .answer{margin-top:calc(var(--u)*3.2);font-size:calc(var(--u)*2.5);max-width:26ch;color:#fff}
+.s-hook .answer .mark{line-height:1.35}
+.s-hook .stripes{position:absolute;right:var(--padx);bottom:calc(var(--pady) + 10px);width:calc(var(--u)*24)}
+
+/* =========================================================
+   SLIDE 3 · DORES
+   ========================================================= */
+.s-pains .pad{display:grid;grid-template-columns:5fr 7fr;gap:calc(var(--u)*5);align-items:center}
+.s-pains .intro .h2{font-size:calc(var(--u)*3.6)}
+.s-pains .intro p{margin-top:1.4em;color:var(--muted);max-width:34ch}
+.s-pains .intro .stripes{margin-top:calc(var(--u)*3);width:70%}
+.pain-list{display:flex;flex-direction:column;gap:calc(var(--u)*1)}
+.pain{
+  display:flex;align-items:center;gap:calc(var(--u)*1.8);
+  padding:calc(var(--u)*1.25) calc(var(--u)*1.8);background:var(--paper);
+  border-left:4px solid var(--red);
+}
+.pain .n{font-family:var(--head);font-weight:600;color:var(--red);font-size:calc(var(--u)*1.6);width:2ch;flex:none}
+.pain q{font-size:calc(var(--body)*1.12);font-weight:500;quotes:'“' '”'}
+.s-pains .closing{margin-top:calc(var(--u)*1.6);font-family:var(--head);text-transform:uppercase;letter-spacing:.04em;font-size:calc(var(--u)*1.45);font-weight:600}
+
+/* =========================================================
+   SLIDE 4 · CAUSA
+   ========================================================= */
+.s-cause .imgcol{position:absolute;left:0;top:0;bottom:0;width:38%}
+.s-cause .imgcol .band{left:30%;top:58%;height:13%;width:85%}
+.s-cause .content{position:absolute;left:44%;right:var(--padx);top:0;bottom:0;display:flex;flex-direction:column;justify-content:center}
+.s-cause .h2{font-size:calc(var(--u)*3.5);max-width:20ch}
+.reasons{margin-top:calc(var(--u)*3.2);display:flex;flex-direction:column;gap:calc(var(--u)*1.7)}
+.reason{display:grid;grid-template-columns:calc(var(--u)*4) 1fr;gap:calc(var(--u)*1.4);align-items:start;padding-top:calc(var(--u)*1.5);border-top:1px solid rgba(255,255,255,.14)}
+.reason .ic{font-family:var(--head);color:var(--red);font-size:calc(var(--u)*2.4);line-height:1;font-weight:600}
+.reason h4{font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:var(--h3);margin-bottom:.35em}
+.reason p{color:#bdbdbd}
+
+/* =========================================================
+   SLIDE 5 · 25 ANOS
+   ========================================================= */
+.s-story .big25{position:absolute;right:1vw;bottom:-5%;font-size:calc(var(--u)*34);opacity:.22;z-index:0;letter-spacing:-.02em}
+.s-story .grid{position:absolute;inset:0;padding:var(--pady) var(--padx);display:grid;grid-template-columns:6fr 5fr;gap:calc(var(--u)*5);align-items:center;z-index:1}
+.s-story .h2{font-size:calc(var(--u)*3.7)}
+.s-story .lead{margin-top:1.3em;max-width:44ch}
+.eras{display:flex;flex-wrap:wrap;gap:8px;margin-top:calc(var(--u)*2.2)}
+.eras span{font-family:var(--head);font-size:var(--small);letter-spacing:.1em;text-transform:uppercase;padding:.45em .9em;border:1px solid #cfcfcf;background:#fff}
+.eras span.now{background:var(--red);color:#fff;border-color:var(--red)}
+.s-story .quote{margin-top:calc(var(--u)*2.6);font-family:var(--head);text-transform:uppercase;font-size:calc(var(--u)*1.9);line-height:1.2;font-weight:600;max-width:30ch}
+.s-story .sign{margin-top:1em;color:var(--muted)}
+.s-story .ph{height:76%;position:relative}
+.s-story .ph .photo{position:absolute;inset:0}
+.s-story .ph .band{left:-8%;top:56%;height:15%;width:70%}
+.s-story .ph .stripes{position:absolute;left:-12%;bottom:-7%;width:60%}
+
+/* =========================================================
+   SLIDE 6 · NÚMEROS
+   ========================================================= */
+.s-stats .pad{display:flex;flex-direction:column;justify-content:center}
+.s-stats .h2{max-width:22ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:calc(var(--u)*4.4);border-top:1px solid rgba(255,255,255,.16)}
+.stat{padding:calc(var(--u)*2.4) calc(var(--u)*2) 0 0;border-right:1px solid rgba(255,255,255,.12);margin-right:calc(var(--u)*2)}
+.stat:last-child{border-right:0;margin-right:0}
+.stat .num{font-family:var(--head);font-weight:600;color:var(--red);font-size:calc(var(--u)*7.2);line-height:1;letter-spacing:-.01em;white-space:nowrap}
+.stat .num small{font-size:.42em;margin-left:.08em;letter-spacing:.02em}
+.stat .lbl{margin-top:.9em;color:#d0d0d0;max-width:22ch}
+.stat .lbl strong{color:#fff}
+
+/* =========================================================
+   SLIDE 7 · DOR x SOLUÇÃO
+   ========================================================= */
+.s-fix .pad{display:flex;flex-direction:column;justify-content:center}
+.s-fix .head{display:flex;justify-content:space-between;align-items:end;gap:calc(var(--u)*4);margin-bottom:calc(var(--u)*2.6)}
+.s-fix .head p{max-width:40ch;color:var(--muted)}
+.fix-table{display:flex;flex-direction:column}
+.fix-row{display:grid;grid-template-columns:4fr calc(var(--u)*4) 7fr;align-items:center;padding:calc(var(--u)*1.25) 0;border-top:1px solid #ddd}
+.fix-row:last-child{border-bottom:1px solid #ddd}
+.fix-row.th{border-top:0;padding-bottom:calc(var(--u)*.6)}
+.fix-row.th span{font-family:var(--head);font-size:var(--eyebrow);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.fix-row.th span:last-child{color:var(--red)}
+.fix-row .pain-t{color:#7a7a7a;text-decoration:line-through;text-decoration-color:rgba(227,6,19,.55);text-decoration-thickness:2px}
+.fix-row .arrow{color:var(--red);display:flex;justify-content:center}
+.fix-row .arrow svg{width:calc(var(--u)*1.7);height:calc(var(--u)*1.7)}
+.fix-row .sol{font-weight:500}
+.fix-row .sol b{font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;font-weight:600;display:block;font-size:calc(var(--body)*1.08)}
+.fix-row .sol span{color:#555;font-weight:400}
+
+/* =========================================================
+   SLIDE 8 · MÉTODO
+   ========================================================= */
+.s-method .pad{display:flex;flex-direction:column;justify-content:center}
+.s-method .h2{max-width:24ch}
+.steps{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:calc(var(--u)*2);margin-top:calc(var(--u)*5)}
+.steps .line{position:absolute;left:0;right:0;top:calc(var(--u)*1.3);height:2px;background:rgba(255,255,255,.18)}
+.steps .line i{position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(var(--p,0));transition:transform .8s var(--ease)}
+.step{position:relative;padding-top:calc(var(--u)*4)}
+.step .dot{position:absolute;top:0;left:0;width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);border-radius:50%;background:var(--black);border:2px solid var(--red);display:grid;place-items:center;font-family:var(--head);font-size:var(--small);color:#fff}
+.step.on .dot{background:var(--red)}
+.step h4{font-family:var(--head);text-transform:uppercase;font-size:var(--h3);letter-spacing:.06em;font-weight:600;margin-bottom:.6em}
+.step p{color:#bdbdbd;font-size:var(--small);line-height:1.6}
+.step ul{list-style:none;margin-top:.8em;display:flex;flex-direction:column;gap:.35em}
+.step li{font-size:var(--small);color:#e6e6e6;padding-left:1em;position:relative}
+.step li::before{content:'';position:absolute;left:0;top:.62em;width:.45em;height:2px;background:var(--red)}
+
+/* =========================================================
+   SLIDE 9 · IMPULSIONAR x GESTÃO
+   ========================================================= */
+.s-vs .colA,.s-vs .colB{position:absolute;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding:var(--pady) calc(var(--u)*5)}
+.s-vs .colA{left:0;width:42%;background:var(--gray-2);padding-left:var(--padx)}
+.s-vs .colB{right:0;width:58%;background:var(--black);color:#fff;padding-right:var(--padx);padding-left:calc(var(--u)*8)}
+.s-vs .colA .h2{font-size:calc(var(--u)*3.3);color:#2a2a2a}
+.s-vs .colB .h2{font-size:calc(var(--u)*3.3)}
+.vs-list{list-style:none;margin-top:calc(var(--u)*2.6);display:flex;flex-direction:column;gap:calc(var(--u)*1.2)}
+.vs-list li{display:flex;gap:14px;align-items:flex-start}
+.vs-list svg{width:calc(var(--u)*1.5);height:calc(var(--u)*1.5);min-width:18px;min-height:18px;flex:none;margin-top:.15em}
+.colA .vs-list li{color:#555}
+.colA .vs-list svg{color:#9a9a9a}
+.colB .vs-list svg{color:var(--red)}
+.colB .vs-list li{color:#eaeaea}
+.s-vs .tagA,.s-vs .tagB{font-family:var(--head);text-transform:uppercase;letter-spacing:.2em;font-size:var(--eyebrow);margin-bottom:1.3em}
+.s-vs .tagA{color:#8a8a8a}
+.s-vs .tagB{color:var(--red)}
+.s-vs .vsbadge{position:absolute;left:42%;top:50%;transform:translate(-50%,-50%);width:calc(var(--u)*6);height:calc(var(--u)*6);border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--head);font-weight:600;font-size:calc(var(--u)*1.7);z-index:2;letter-spacing:.06em}
+.s-vs .verdict{margin-top:calc(var(--u)*3);font-family:var(--head);text-transform:uppercase;font-size:calc(var(--u)*1.5);letter-spacing:.04em}
+
+/* =========================================================
+   SLIDE 10 · CANAIS
+   ========================================================= */
+.s-channels .pad{display:flex;flex-direction:column;justify-content:center}
+.s-channels .head{display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*4)}
+.s-channels .head p{max-width:42ch;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*3.4)}
+.tile{background:var(--paper);padding:calc(var(--u)*2) calc(var(--u)*1.8);position:relative;overflow:hidden;transition:background .3s,color .3s}
+.tile:hover{background:var(--black);color:#fff}
+.tile:hover p{color:#bbb}
+.tile svg{width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);min-width:26px;min-height:26px;color:var(--red);margin-bottom:calc(var(--u)*1.4)}
+.tile h4{font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;font-size:calc(var(--h3)*.92);font-weight:600;margin-bottom:.4em;line-height:1.15}
+.tile p{font-size:var(--small);color:#666;line-height:1.5}
+.tile.star{background:var(--red);color:#fff}
+.tile.star svg{color:#fff}
+.tile.star p{color:rgba(255,255,255,.85)}
+
+/* =========================================================
+   SLIDE 11 · SEGMENTOS
+   ========================================================= */
+.s-seg .imgbox{position:absolute;left:54.7%;right:0;top:9%;bottom:9%}
+.s-seg .imgbox .photo{position:absolute;inset:0}
+.s-seg .imgbox .photo img{object-position:30% 50%}
+.s-seg .imgbox .photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.55))}
+.seglist{position:absolute;right:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:space-between;padding:calc(var(--u)*.6) 0;z-index:2;list-style:none}
+.seglist li{display:flex;align-items:center;justify-content:flex-end;gap:calc(var(--u)*1.2);font-family:var(--head);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-size:calc(var(--u)*1.55)}
+.seglist li::after{content:'';width:calc(var(--u)*4.2);height:2px;background:var(--red)}
+.s-seg .vword{position:absolute;left:51.2%;bottom:28%;font-family:var(--body-f);font-weight:500;color:var(--red);font-size:calc(var(--u)*3.4);letter-spacing:.02em;white-space:nowrap;line-height:1}
+.s-seg .vword span{display:block;writing-mode:vertical-rl;transform:rotate(180deg)}
+.s-seg .num01{position:absolute;left:43%;bottom:9%;font-family:var(--head);font-weight:700;font-size:calc(var(--u)*14);line-height:.8;color:var(--black);z-index:1}
+.s-seg .stripes{position:absolute;left:51%;bottom:3.5%;width:22%;z-index:1}
+.s-seg .text{position:absolute;left:var(--padx);top:0;bottom:0;width:36%;display:flex;flex-direction:column;justify-content:center}
+.s-seg .text .row{display:flex;gap:calc(var(--u)*1.6)}
+.s-seg .text .vbar{background:var(--red)}
+.s-seg .text .h2{font-size:calc(var(--u)*3.3)}
+.s-seg .text p{margin-top:1.1em;color:#444}
+.s-seg .text .f{margin-top:calc(var(--u)*2.4);font-family:var(--head);text-transform:uppercase;font-size:calc(var(--u)*1.55);font-weight:600;letter-spacing:.03em;line-height:1.25}
+
+/* =========================================================
+   SLIDE 12 · CASE
+   ========================================================= */
+.s-case .grayc{position:absolute;left:47.3%;width:43.3%;top:0;bottom:0;background:var(--gray)}
+.s-case .bigNum{position:absolute;left:47.6%;top:6%;font-family:var(--head);font-weight:700;color:#fff;font-size:calc(var(--u)*13);line-height:.8;letter-spacing:-.02em}
+.s-case .bigNum span{display:block;writing-mode:vertical-rl;transform:rotate(180deg)}
+.s-case .text{position:absolute;left:calc(var(--u)*10.5);top:0;bottom:0;width:31%;display:flex;flex-direction:column;justify-content:center}
+.s-case .text .redline{height:calc(var(--u)*1);width:120%;background:var(--red);margin-bottom:calc(var(--u)*3.6)}
+.s-case .h2{color:var(--red);font-size:calc(var(--u)*3.4)}
+.s-case .text p{margin-top:1em;color:#333}
+.s-case .text .h3{margin-top:calc(var(--u)*2.6)}
+.s-case .result{margin-top:calc(var(--u)*2.2);display:flex;align-items:baseline;gap:calc(var(--u)*1.4);border-top:2px solid var(--ink);padding-top:calc(var(--u)*1.4)}
+.s-case .result .big{font-family:var(--head);font-weight:700;font-size:calc(var(--u)*4.6);line-height:.9;color:var(--ink);white-space:nowrap}
+.s-case .result .big em{font-style:normal;color:var(--red)}
+.s-case .result span{color:#444;font-size:var(--small);max-width:18ch;line-height:1.35}
+.s-case .presence{position:absolute;left:64%;right:11%;top:12%;display:flex;gap:calc(var(--u)*1.6)}
+.s-case .presence .vbar{flex:none}
+.s-case .presence p{font-size:var(--small);color:#222}
+.s-case .presence .h3{margin-bottom:.6em}
+.s-case .screen{position:absolute;left:45%;right:7.5%;top:33%;bottom:13%;background:#111;border-radius:calc(var(--u)*1.4) calc(var(--u)*1.4) 0 0;padding:calc(var(--u)*1.6)}
+.s-case .screen .photo{position:absolute;inset:calc(var(--u)*1.6)}
+.s-case .screen .photo img{object-position:50% 40%}
+.s-case .base{position:absolute;left:43.6%;right:6%;bottom:9.4%;height:3.8%;background:linear-gradient(#e6e6e6,#bdbdbd);border-radius:0 0 calc(var(--u)*1.6) calc(var(--u)*1.6);box-shadow:0 20px 40px -18px rgba(0,0,0,.5)}
+.s-case .screen .band{left:12%;top:27%;height:28%;right:-10%}
+.s-case .handle{position:absolute;right:calc(var(--u)*3);bottom:calc(var(--u)*2.6);color:#fff;font-size:var(--small);font-weight:600;z-index:3}
+
+/* =========================================================
+   SLIDE 13 · CLIENTES
+   ========================================================= */
+.s-clients .pad{display:grid;grid-template-columns:4fr 7fr;gap:calc(var(--u)*5);align-items:center}
+.s-clients .h2{font-size:calc(var(--u)*3.4)}
+.s-clients .intro p{margin-top:1.2em;color:#444}
+.s-clients .intro .also{margin-top:calc(var(--u)*2.2);padding:calc(var(--u)*1.6);background:var(--black);color:#fff;font-size:var(--small);line-height:1.55}
+.s-clients .intro .also b{color:var(--red);font-family:var(--head);letter-spacing:.12em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:.4em}
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*.9)}
+.logo{height:calc(var(--u)*9.4);background:#fff;border:1px solid #ececec;display:flex;align-items:center;justify-content:center;padding:calc(var(--u)*1.3)}
+.logo img{height:100%;width:100%;object-fit:contain;filter:grayscale(1);opacity:.8;transition:filter .3s,opacity .3s}
+.logo:hover img{filter:none;opacity:1}
+.slide.active .logo img{animation:colorize 1.4s var(--ease) both;animation-delay:calc(var(--d,0)*1s + .4s)}
+@keyframes colorize{from{filter:grayscale(1);opacity:.8}to{filter:none;opacity:1}}
+.logo.wide{grid-column:span 2;aspect-ratio:auto}
+
+/* =========================================================
+   SLIDE 14 · COMPROMISSOS
+   ========================================================= */
+.s-promise .bg{position:absolute;inset:0}
+.s-promise .bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.35) contrast(1.1)}
+.s-promise .bg .band{left:62%;top:74%;height:12%;right:0;mix-blend-mode:multiply;opacity:.9}
+.s-promise .pad{display:flex;flex-direction:column;justify-content:center}
+.s-promise .h2{max-width:20ch}
+.s-promise .lead{margin-top:1em;max-width:46ch}
+.promises{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.4) calc(var(--u)*3);margin-top:calc(var(--u)*3.4);max-width:min(88%,1200px)}
+.promise{display:flex;gap:calc(var(--u)*1.4);align-items:flex-start;padding:calc(var(--u)*1.6);background:rgba(10,10,10,.55);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.promise svg{width:calc(var(--u)*2.2);height:calc(var(--u)*2.2);min-width:22px;min-height:22px;color:var(--red);flex:none}
+.promise h4{font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;font-weight:600;font-size:var(--h3);line-height:1.15;margin-bottom:.35em}
+.promise p{color:#c9c9c9;font-size:var(--small)}
+
+/* =========================================================
+   SLIDE 15 · CTA
+   ========================================================= */
+.s-cta .pad{display:grid;grid-template-columns:7fr 5fr;gap:calc(var(--u)*5);align-items:center}
+.s-cta .h1{font-size:calc(var(--u)*4.7)}
+.s-cta .lead{margin-top:1.2em;color:rgba(255,255,255,.92);max-width:46ch}
+.s-cta .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:calc(var(--u)*3)}
+.s-cta .card{background:#fff;color:var(--ink);padding:calc(var(--u)*2.8);box-shadow:0 30px 70px -20px rgba(0,0,0,.4)}
+.s-cta .card .label{color:var(--red);margin-bottom:1.2em;display:block}
+.s-cta .card ol{list-style:none;counter-reset:c;display:flex;flex-direction:column;gap:calc(var(--u)*1.3)}
+.s-cta .card li{counter-increment:c;display:grid;grid-template-columns:calc(var(--u)*2.8) 1fr;gap:12px;align-items:start}
+.s-cta .card li::before{content:counter(c,decimal-leading-zero);font-family:var(--head);font-weight:600;color:var(--red);font-size:calc(var(--u)*1.5);line-height:1.2}
+.s-cta .card li b{display:block;font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.s-cta .card li span{font-size:var(--small);color:#555}
+.s-cta .stripes{background:repeating-linear-gradient(90deg,#fff 0 2px,transparent 2px 9px);opacity:.5;position:absolute;left:var(--padx);top:calc(var(--bar) + 18px);width:calc(var(--u)*18);height:calc(var(--u)*2.2)}
+
+/* =========================================================
+   SLIDE 16 · OBRIGADO
+   ========================================================= */
+.s-end .word{position:absolute;left:41%;top:45.4%;font-family:var(--body-f);font-weight:700;color:var(--red);font-size:calc(var(--u)*7.6);letter-spacing:.42em;line-height:1}
+.s-end .side{position:absolute;left:65%;top:32.5%;width:22%}
+.s-end .side .stripes{width:100%;height:calc(var(--u)*4.6)}
+.s-end .side .txt{margin-top:calc(var(--u)*4.4);color:var(--red);font-size:calc(var(--u)*1.12);text-transform:uppercase;line-height:1.35;letter-spacing:.02em}
+.s-end .thanks{margin-top:calc(var(--u)*3.2);display:inline-flex;border:1px solid #fff;color:#fff;padding:.7em 2em;font-size:calc(var(--u)*1.12);letter-spacing:.04em}
+.s-end .foot{position:absolute;left:var(--padx);bottom:calc(var(--bar) + 30px);display:flex;gap:calc(var(--u)*3);color:#8d8d8d;font-size:var(--small);flex-wrap:wrap}
+.s-end .foot a:hover{color:#fff}
+.s-end .again{margin-top:calc(var(--u)*2.4);display:flex;gap:10px;flex-wrap:wrap}
+.s-end .mini{font-size:var(--small);color:#bdbdbd;display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid #444;padding-bottom:3px}
+.s-end .mini:hover{color:#fff;border-color:#fff}
+.s-end .mini svg{width:14px;height:14px}
+
+/* =========================================================
+   MOBILE / RETRATO
+   ========================================================= */
+@media (max-width:760px), (max-aspect-ratio:4/5){
+  :root{
+    --u:2.6vw;
+    --h1:clamp(30px,8.6vw,46px);
+    --h2:clamp(26px,7.4vw,38px);
+    --h3:16px;
+    --body:15px;
+    --small:13.5px;
+    --eyebrow:11px;
+    --padx:22px;
+    --pady:0px;
+    --bar:58px;
+  }
+  .pad{position:absolute;inset:0;padding:calc(var(--bar) + 18px) var(--padx) calc(var(--bar) + 28px);overflow-y:auto;overscroll-behavior:contain;display:block !important}
+  .slide{overflow:hidden}
+  .hint{display:none}
+  .brand span{display:none}
+  .tbtn .lbl{display:none}
+  .tbtn{width:40px;padding:0;justify-content:center}
+  .h1,.h2{font-size:var(--h2) !important}
+  .lead{font-size:16px}
+  .stripes{height:28px}
+
+  /* capa */
+  .s-cover .left{width:100%;top:46%;bottom:0}
+  .s-cover .right{width:100%;top:0;bottom:54%}
+  .s-cover .right img{object-position:62% 22%}
+  .s-cover .band.eyes{left:0;width:100%;top:30%;height:21%}
+  .s-cover .vline{display:none}
+  .s-cover .flame{left:22px;top:auto;bottom:calc(54% - 28px);width:56px;z-index:4}
+  .s-cover .word{left:22px;top:52%;font-size:clamp(46px,15vw,72px)}
+  .s-cover .tag{left:22px;top:64%}
+  .s-cover .tag .txt{font-size:14px;padding-top:26px}
+  .s-cover .tag .vbar{height:58px}
+  .s-cover .bottom{left:22px;right:22px;max-width:none;bottom:calc(var(--bar) + 22px)}
+
+  /* gancho */
+  .s-hook .pad{display:flex !important;flex-direction:column;justify-content:center}
+  .s-hook .h1{font-size:clamp(30px,8.4vw,42px) !important}
+  .s-hook .answer{font-size:22px}
+  .s-hook .stripes{display:none}
+
+  /* dores */
+  .s-pains .intro{margin-bottom:22px}
+  .s-pains .intro .stripes{display:none}
+  .pain{padding:12px 14px;gap:12px}
+  .pain .n{font-size:20px}
+  .pain q{font-size:15px}
+  .s-pains .closing{font-size:17px;margin-top:16px}
+
+  /* causa */
+  .s-cause .imgcol{width:100%;height:28%;bottom:auto;opacity:.55}
+  .s-cause .content{position:static;padding:calc(var(--bar) + 20px) var(--padx) calc(var(--bar) + 28px);overflow-y:auto;position:absolute;inset:0;justify-content:flex-start}
+  .s-cause .content > :first-child{margin-top:16vh}
+  .reason{grid-template-columns:34px 1fr;gap:10px}
+  .reason .ic{font-size:22px}
+
+  /* história */
+  .s-story .grid{display:block;padding:calc(var(--bar) + 18px) var(--padx) calc(var(--bar) + 28px);overflow-y:auto}
+  .s-story .ph{display:none}
+  .s-story .big25{font-size:70vw;right:-8vw;bottom:-4%;opacity:.35}
+  .s-story .quote{font-size:20px}
+
+  /* números */
+  .stats{grid-template-columns:1fr 1fr;gap:0}
+  .stat{margin:0;padding:18px 12px 18px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .stat .num{font-size:48px}
+  .stat .lbl{font-size:13.5px}
+
+  /* dor x solução */
+  .s-fix .head{display:block;margin-bottom:16px}
+  .s-fix .head p{margin-top:10px}
+  .fix-row{grid-template-columns:1fr;gap:4px;padding:12px 0}
+  .fix-row.th{display:none}
+  .fix-row .arrow{display:none}
+  .fix-row .pain-t{font-size:13.5px}
+
+  /* método */
+  .steps{grid-template-columns:1fr;gap:16px;margin-top:24px}
+  .steps .line{left:13px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .steps .line i{transform-origin:top;transform:scaleY(var(--p,0))}
+  .step{padding:0 0 0 44px}
+  .step .dot{width:28px;height:28px;font-size:12px}
+  .step ul{display:none}
+
+  /* vs */
+  .s-vs .colA,.s-vs .colB{position:relative;width:100%;padding:22px var(--padx)}
+  .s-vs .scroll{position:absolute;inset:0;overflow-y:auto;padding:var(--bar) 0 calc(var(--bar) + 10px);background:var(--black)}
+  .s-vs .colA{padding-top:22px}
+  .s-vs .vsbadge{display:none}
+  .s-vs .colA .h2,.s-vs .colB .h2{font-size:26px !important}
+  .vs-list{gap:10px;margin-top:14px}
+  .vs-list li{font-size:14.5px}
+
+  /* canais */
+  .s-channels .head{display:block}
+  .s-channels .head p{margin-top:10px}
+  .tiles{grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+  .tile{padding:14px}
+  .tile svg{margin-bottom:8px}
+  .tile h4{font-size:14px}
+  .tile p{font-size:12.5px}
+
+  /* segmentos */
+  .s-seg .imgbox{left:0;right:0;top:0;bottom:auto;height:58%}
+  .s-seg .vword,.s-seg .num01,.s-seg .stripes{display:none}
+  .seglist{right:16px;top:calc(var(--bar) + 6px);bottom:14px}
+  .seglist li{font-size:13px}
+  .seglist li::after{width:22px}
+  .s-seg .text{left:var(--padx);right:var(--padx);width:auto;top:58%;bottom:var(--bar);justify-content:center}
+  .s-seg .text .vbar{display:none}
+  .s-seg .text p{font-size:14px}
+  .s-seg .text .f{font-size:16px;margin-top:12px}
+
+  /* case */
+  .s-case .grayc{left:0;width:100%;top:0;bottom:auto;height:44%}
+  .s-case .bigNum,.s-case .presence,.s-case .base{display:none}
+  .s-case .screen{left:22px;right:22px;top:calc(var(--bar) + 6px);bottom:auto;height:calc(44% - var(--bar) + 20px);padding:8px;border-radius:10px}
+  .s-case .screen .photo{inset:8px}
+  .s-case .handle{right:16px;bottom:12px}
+  .s-case .text{left:var(--padx);right:var(--padx);width:auto;top:calc(44% + 34px);bottom:var(--bar);justify-content:flex-start;overflow-y:auto;padding-bottom:20px}
+  .s-case .text .redline{display:none}
+  .s-case .h2{font-size:26px !important}
+  .s-case .result .big{font-size:40px}
+
+  /* clientes */
+  .logos{grid-template-columns:repeat(3,1fr);gap:6px;margin-top:20px}
+  .logo{padding:8px}
+  .s-clients .intro .also{margin-top:14px;padding:14px}
+
+  /* compromissos */
+  .promises{grid-template-columns:1fr;max-width:none;gap:10px;margin-top:20px}
+  .promise{padding:14px}
+
+  /* cta */
+  .s-cta .card{margin-top:24px;padding:20px}
+  .s-cta .card li{grid-template-columns:32px 1fr}
+  .s-cta .card li::before{font-size:18px}
+  .s-cta .stripes{display:none}
+  .btn{width:100%;font-size:15px}
+
+  /* fim */
+  .s-end .word{left:22px;top:28%;font-size:clamp(46px,15vw,72px)}
+  .s-end .side{left:22px;right:22px;width:auto;top:42%}
+  .s-end .side .stripes{height:30px}
+  .s-end .side .txt{margin-top:20px;font-size:14px}
+  .s-end .foot{bottom:calc(var(--bar) + 18px);left:22px;right:22px;gap:14px}
+  .menu{position:fixed;top:calc(var(--bar) + env(safe-area-inset-top));left:12px;right:12px;min-width:0}
+  .counter{min-width:60px}
+  .topbar,.controls{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .on-dark .topbar,.on-dark .controls{background:rgba(10,10,10,.9)}
+  .on-red .topbar,.on-red .controls{background:rgba(227,6,19,.96)}
+  .at-cover .topbar{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .at-cover .controls{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .at-cover .counter{color:var(--ink)}
+  .at-cover .cbtn:not(.next){background:rgba(10,10,10,.06);border-color:rgba(10,10,10,.12);color:var(--ink)}
+  .s-promise .bg .band{display:none}
+}
+@media (max-height:520px) and (orientation:landscape){
+  :root{--bar:50px}
+  .hint{display:none}
+}
+
+/* =========================================================
+   MODO IMPRESSÃO / PDF
+   ========================================================= */
+@page{size:1920px 1080px;margin:0}
+body.print,body.print .stage{overflow:visible;position:static;height:auto;background:#fff}
+body.print{--u:19.2px;--h1:calc(19.2px*4.4);--h2:calc(19.2px*3.15);--h3:calc(19.2px*1.55);--body:calc(19.2px*1.08);--small:calc(19.2px*.86);--eyebrow:calc(19.2px*.78);--padx:calc(19.2px*6);--pady:calc(19.2px*6.4)}
+body.print .topbar,body.print .controls,body.print .progress,body.print .toast,body.print .start,body.print .s-end .again{display:none !important}
+body.print .slide{position:relative;inset:auto;width:1920px;height:1080px;opacity:1;visibility:visible;break-after:page;page-break-after:always;transition:none}
+body.print .a,body.print .f{opacity:1 !important;transform:none !important;clip-path:none !important;transition:none !important}
+body.print .steps .line i{transform:scaleX(1);transition:none}
+body.print .step .dot{background:var(--red)}
+body.print .logo img{filter:none;opacity:1;animation:none}
+body.print *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+@media (prefers-reduced-motion:reduce){
+  .a,.f,.slide{transition-duration:.01s !important;transition-delay:0s !important}
+  .pulse::after{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= BARRA SUPERIOR ================= -->
+<header class="topbar" id="topbar">
+  <a class="brand" href="https://e4tmkt.com" target="_blank" rel="noopener" aria-label="Site da E4T">
+    <img src="img/flame.png" alt="E4T"><span>E4T</span>
+  </a>
+  <nav class="tools" aria-label="Ações da apresentação">
+    <a class="tbtn" id="pdfBtn" href="E4T-Apresentacao-Institucional.pdf" download aria-label="Baixar em PDF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      <span class="lbl">Baixar PDF</span>
+    </a>
+    <button class="tbtn primary" id="shareBtn" aria-haspopup="true" aria-expanded="false" aria-label="Encaminhar apresentação">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>
+      <span class="lbl">Encaminhar</span>
+    </button>
+    <button class="tbtn icon" id="fsBtn" aria-label="Tela cheia">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+    <div class="menu" id="shareMenu" role="menu">
+      <p>Encaminhar esta apresentação</p>
+      <a class="wa" id="shWa" target="_blank" rel="noopener" role="menuitem">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.6 15.6 2.1 13.8 2.1 12 2.1 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 7 2.9 1.9 1.9 2.9 4.3 2.9 7 0 5.4-4.4 9.7-9.9 9.7z"/></svg>
+        WhatsApp
+      </a>
+      <a id="shMail" role="menuitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        E-mail
+      </a>
+      <a id="shSms" role="menuitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+        Mensagem (SMS)
+      </a>
+      <button id="shNative" role="menuitem" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+        Mais opções
+      </button>
+      <hr>
+      <button id="shCopy" role="menuitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+        Copiar link
+      </button>
+      <a href="E4T-Apresentacao-Institucional.pdf" download role="menuitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M12 11v6m-3-3 3 3 3-3"/></svg>
+        Baixar em PDF
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main class="stage" id="stage">
+
+<!-- ============ 01 · CAPA ============ -->
+<section class="slide light s-cover" data-tone="cover" aria-label="Capa">
+  <div class="left"></div>
+  <div class="right photo bw a zoom fade">
+    <img src="img/mulher.jpg" alt="Mulher sorrindo olhando para frente">
+    <span class="band eyes a wipe" style="--d:.7"></span>
+  </div>
+  <span class="vline a wipe-v" style="--d:.9"></span>
+  <img class="flame a" style="--d:.2" src="img/flame.png" alt="Símbolo E4T">
+  <div class="word a" style="--d:1.1">E4T</div>
+  <div class="tag a" style="--d:1.35"><span class="vbar"></span><span class="txt">Agência de marketing<br>e publicidade</span></div>
+  <div class="bottom">
+    <div class="years a" style="--d:1.6">25 anos de mercado publicitário</div>
+    <p class="para a" id="paraCover" style="--d:1.75" hidden>Apresentação preparada para <strong class="js-nome"></strong></p>
+    <div class="start a" style="--d:1.9"><span class="pulse"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></span>Clique para começar</div>
+  </div>
+</section>
+
+<!-- ============ 02 · GANCHO ============ -->
+<section class="slide dark s-hook" data-tone="dark" aria-label="Pergunta">
+  <div class="bg a fade" style="--d:.1"><img src="img/dados.jpg" alt=""></div>
+  <div class="pad">
+    <div class="eyebrow a" style="--d:.2">Antes de falar da gente</div>
+    <h1 class="h1 a" style="--d:.35">Agora mesmo, alguém perto de você está procurando <span class="red">exatamente o que você vende.</span></h1>
+    <p class="h2 answer f"><span class="mark">A pergunta é:</span> ele vai encontrar você ou o seu concorrente?</p>
+  </div>
+  <div class="stripes a wipe" style="--d:.8"></div>
+</section>
+
+<!-- ============ 03 · DORES ============ -->
+<section class="slide light s-pains" data-tone="light" aria-label="Dores">
+  <div class="pad">
+    <div class="intro">
+      <div class="eyebrow a" style="--d:.1">Identificação</div>
+      <h2 class="h2 a" style="--d:.2">Talvez você já tenha dito uma dessas frases.</h2>
+      <p class="a" style="--d:.35">A gente escuta isso toda semana de donos de negócio bons de verdade, com produto bom, que só não estão sendo vistos por quem deveria.</p>
+      <div class="stripes a wipe" style="--d:.5"></div>
+    </div>
+    <div>
+      <div class="pain-list">
+        <div class="pain f right"><span class="n">01</span><q>Já impulsionei post e não vi retorno nenhum.</q></div>
+        <div class="pain f right"><span class="n">02</span><q>Meu movimento depende do boca a boca e de indicação.</q></div>
+        <div class="pain f right"><span class="n">03</span><q>Pago alguém para postar, mas post bonito não paga boleto.</q></div>
+        <div class="pain f right"><span class="n">04</span><q>Não faço ideia de quanto me custa trazer um cliente novo.</q></div>
+        <div class="pain f right"><span class="n">05</span><q>Meu concorrente aparece no Google e no Instagram. Eu não.</q></div>
+      </div>
+      <p class="closing f">Se você se reconheceu em pelo menos uma, <span class="red">essa apresentação é para você.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · CAUSA ============ -->
+<section class="slide dark s-cause" data-tone="dark" aria-label="Causa do problema">
+  <div class="imgcol photo bw a fade">
+    <img src="img/reuniao.jpg" alt="Equipe analisando dados de campanha">
+    <span class="band a wipe" style="--d:.6"></span>
+  </div>
+  <div class="content">
+    <div class="eyebrow a" style="--d:.2">O que está por trás</div>
+    <h2 class="h2 a" style="--d:.3">O problema quase nunca é falta de verba. <span class="red">É verba sem estratégia.</span></h2>
+    <div class="reasons">
+      <div class="reason f"><span class="ic">01</span><div><h4>Fala com todo mundo</h4><p>Anúncio sem público, região e momento definidos aparece para quem nunca vai comprar. E cobra por isso.</p></div></div>
+      <div class="reason f"><span class="ic">02</span><div><h4>O clique escorre</h4><p>Gente interessada chega num perfil desatualizado, num site lento ou num WhatsApp que demora a responder. E vai embora.</p></div></div>
+      <div class="reason f"><span class="ic">03</span><div><h4>Ninguém acompanha</h4><p>Campanha é organismo vivo. Sem leitura semanal dos números, o que funcionava na segunda já está caro na sexta.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · 25 ANOS ============ -->
+<section class="slide paper s-story" data-tone="light" aria-label="Nossa história">
+  <div class="big25 outline-num a fade" style="--d:.1">25</div>
+  <div class="grid">
+    <div>
+      <div class="eyebrow a" style="--d:.2">Quem está do outro lado</div>
+      <h2 class="h2 a" style="--d:.3">25 anos fazendo marcas <span class="red">serem escolhidas.</span></h2>
+      <p class="lead a" style="--d:.45">Começamos quando anúncio era jornal, panfleto e outdoor. Acompanhamos de dentro a chegada dos sites, das redes sociais, do Google Ads, do Meta Ads e, agora, da inteligência artificial.</p>
+      <div class="eras">
+        <span class="a" style="--d:.6">Jornal</span><span class="a" style="--d:.66">Panfleto</span><span class="a" style="--d:.72">Outdoor</span><span class="a" style="--d:.78">Sites</span><span class="a" style="--d:.84">Redes sociais</span><span class="a" style="--d:.9">Google Ads</span><span class="a" style="--d:.96">Meta Ads</span><span class="a now" style="--d:1.02">IA</span>
+      </div>
+      <p class="quote f">As ferramentas mudaram todas. <span class="red">O motivo que faz alguém escolher uma marca continua o mesmo.</span></p>
+      <p class="sign f">É essa bagagem que a E4T coloca a serviço do seu negócio: estratégia de quem já viu muita coisa dar certo e muita coisa dar errado.</p>
+    </div>
+    <div class="ph a right" style="--d:.4">
+      <div class="photo bw"><img src="img/encontro.jpg" alt="Pessoas conversando em um encontro ao ar livre"><span class="band a wipe" style="--d:1"></span></div>
+      <div class="stripes a wipe" style="--d:1.2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · NÚMEROS ============ -->
+<section class="slide dark s-stats" data-tone="dark" aria-label="Números">
+  <div class="pad">
+    <div class="eyebrow a" style="--d:.1">Em números</div>
+    <h2 class="h2 a" style="--d:.2">Experiência a gente não declara. <span class="red">A gente mostra.</span></h2>
+    <div class="stats">
+      <div class="stat a" style="--d:.4"><div class="num"><span data-count="25">25</span></div><p class="lbl"><strong>anos</strong> de mercado publicitário, do impresso ao digital</p></div>
+      <div class="stat a" style="--d:.55"><div class="num"><span data-count="10">10</span><small>+</small></div><p class="lbl"><strong>marcas criadas do zero</strong>, do nome à embalagem</p></div>
+      <div class="stat a" style="--d:.7"><div class="num"><span data-count="9">9</span></div><p class="lbl"><strong>segmentos</strong> atendidos, da gastronomia à indústria</p></div>
+      <div class="stat a" style="--d:.85"><div class="num"><span data-count="7">7</span><small>dias</small></div><p class="lbl">para um lançamento digital nosso passar dos <strong>6 dígitos</strong> de faturamento</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 · DOR x SOLUÇÃO ============ -->
+<section class="slide light s-fix" data-tone="light" aria-label="Como resolvemos">
+  <div class="pad">
+    <div class="head">
+      <div>
+        <div class="eyebrow a" style="--d:.1">Como a E4T resolve</div>
+        <h2 class="h2 a" style="--d:.2">Cada dor tem <span class="red">um plano.</span></h2>
+      </div>
+      <p class="a" style="--d:.35">Nada de pacote genérico. A gente parte do problema real do seu negócio e desenha a solução em cima dele.</p>
+    </div>
+    <div class="fix-table">
+      <div class="fix-row th a" style="--d:.45"><span>Hoje</span><span></span><span>Com a E4T</span></div>
+      <div class="fix-row f"><span class="pain-t">Impulsiona e não vê retorno</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span><span class="sol"><b>Campanha com objetivo de venda</b><span>Público, região e criativo pensados para gerar contato e cliente, não curtida.</span></span></div>
+      <div class="fix-row f"><span class="pain-t">Depende do boca a boca</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span><span class="sol"><b>Fluxo previsível de clientes novos</b><span>Meta Ads e Google Ads trabalhando todo dia, inclusive quando você está ocupado atendendo.</span></span></div>
+      <div class="fix-row f"><span class="pain-t">Post bonito que não vende</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span><span class="sol"><b>Criativo feito para converter</b><span>Oferta clara, prova e chamada para ação. Bonito, sim, mas com função.</span></span></div>
+      <div class="fix-row f"><span class="pain-t">Não sabe quanto custa um cliente</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span><span class="sol"><b>Números que dono entende</b><span>Custo por contato, custo por cliente e retorno do investimento, mês a mês.</span></span></div>
+      <div class="fix-row f"><span class="pain-t">O concorrente aparece, você não</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span><span class="sol"><b>Presença onde a decisão acontece</b><span>Google Pesquisa, Google Maps e Instagram, começando por um raio-x da sua concorrência local.</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 · MÉTODO ============ -->
+<section class="slide dark s-method" data-tone="dark" aria-label="Método E4T">
+  <div class="pad">
+    <div class="eyebrow a" style="--d:.1">Método E4T</div>
+    <h2 class="h2 a" style="--d:.2">Do diagnóstico ao <span class="red">cliente na sua porta.</span></h2>
+    <div class="steps" id="steps">
+      <div class="line"><i></i></div>
+      <div class="step f"><span class="dot">01</span><h4>Diagnóstico</h4><p>Raio-x do seu negócio, da sua oferta e da concorrência local.</p><ul><li>Concorrentes no Google e no Meta</li><li>Pontos de perda de cliente</li></ul></div>
+      <div class="step f"><span class="dot">02</span><h4>Estratégia</h4><p>Público, região, oferta, verba e metas definidos antes do primeiro real.</p><ul><li>Plano de mídia</li><li>Metas por canal</li></ul></div>
+      <div class="step f"><span class="dot">03</span><h4>Campanhas</h4><p>Criativos e anúncios no ar no Meta Ads e no Google Ads.</p><ul><li>Foto, vídeo e copy</li><li>Testes de criativo</li></ul></div>
+      <div class="step f"><span class="dot">04</span><h4>Conversão</h4><p>Página, perfil e WhatsApp prontos para transformar contato em venda.</p><ul><li>Landing page</li><li>Roteiro de atendimento</li></ul></div>
+      <div class="step f"><span class="dot">05</span><h4>Otimização</h4><p>Leitura semanal dos números, ajustes contínuos e relatório mensal.</p><ul><li>Corte do que não performa</li><li>Escala do que funciona</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 · IMPULSIONAR x GESTÃO ============ -->
+<section class="slide dark s-vs" data-tone="dark" data-brand="ink" aria-label="Impulsionar versus gestão de tráfego">
+ <div class="scroll">
+  <div class="colA">
+    <div class="tagA a" style="--d:.1">O que a maioria faz</div>
+    <h2 class="h2 a" style="--d:.2">Impulsionar post</h2>
+    <ul class="vs-list">
+      <li class="a" style="--d:.35"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Público amplo, escolhido no botão</li>
+      <li class="a" style="--d:.45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Objetivo de alcance e curtida</li>
+      <li class="a" style="--d:.55"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Sem rastrear quem virou cliente</li>
+      <li class="a" style="--d:.65"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Um anúncio só, sem teste</li>
+      <li class="a" style="--d:.75"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Resultado descoberto no caixa, no fim do mês</li>
+    </ul>
+  </div>
+  <div class="vsbadge a" style="--d:.8">VS</div>
+  <div class="colB f fade">
+    <div class="tagB">O que a E4T faz</div>
+    <h2 class="h2">Gestão de tráfego pago</h2>
+    <ul class="vs-list">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg>Público, raio de distância e horário definidos por estratégia</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg>Objetivo de contato, agendamento ou venda</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg>Pixel, conversões e WhatsApp rastreados</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg>Vários criativos testados, verba no que performa</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg>Números acompanhados toda semana</li>
+    </ul>
+    <p class="verdict">Mesmo dinheiro. <span class="red">Resultado completamente diferente.</span></p>
+  </div>
+ </div>
+</section>
+
+<!-- ============ 10 · CANAIS ============ -->
+<section class="slide light s-channels" data-tone="light" aria-label="Onde atuamos">
+  <div class="pad">
+    <div class="head">
+      <div>
+        <div class="eyebrow a" style="--d:.1">O que entregamos</div>
+        <h2 class="h2 a" style="--d:.2">Tudo que existe entre o anúncio <span class="red">e a venda.</span></h2>
+      </div>
+      <p class="a" style="--d:.35">Tráfego pago é o motor. Mas motor sem estrada não leva a lugar nenhum. Por isso cuidamos do caminho inteiro.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile star a" style="--d:.4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><h4>Meta Ads</h4><p>Anúncios no Instagram e no Facebook para quem está perto e tem o perfil certo.</p></div>
+      <div class="tile star a" style="--d:.48"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><h4>Google Ads</h4><p>Apareça no topo quando alguém pesquisa pelo que você vende.</p></div>
+      <div class="tile a" style="--d:.56"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><h4>Google Maps</h4><p>Perfil da Empresa otimizado para ser achado e escolhido no mapa.</p></div>
+      <div class="tile a" style="--d:.64"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg><h4>Landing pages</h4><p>Páginas rápidas e objetivas que transformam visita em contato.</p></div>
+      <div class="tile a" style="--d:.72"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/></svg><h4>WhatsApp de vendas</h4><p>Triagem, roteiro e organização para não perder quem chamou.</p></div>
+      <div class="tile a" style="--d:.8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg><h4>Foto e vídeo</h4><p>Produção própria de criativos, do roteiro à edição.</p></div>
+      <div class="tile a" style="--d:.88"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><h4>Rastreamento e relatórios</h4><p>Pixel, conversões e um relatório que mostra o que voltou para o caixa.</p></div>
+      <div class="tile a" style="--d:.96"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg><h4>Marca e conteúdo</h4><p>Identidade visual, social media e posicionamento quando o negócio pede.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 · SEGMENTOS ============ -->
+<section class="slide light s-seg" data-tone="light" aria-label="Segmentos">
+  <div class="imgbox a fade">
+    <div class="photo"><img src="img/steak.jpg" alt="Carne na brasa"></div>
+    <ul class="seglist">
+      <li class="a left" style="--d:.3">Gastronomia</li>
+      <li class="a left" style="--d:.38">Arquitetura</li>
+      <li class="a left" style="--d:.46">Tecnologia</li>
+      <li class="a left" style="--d:.54">Imobiliário</li>
+      <li class="a left" style="--d:.62">Saúde</li>
+      <li class="a left" style="--d:.7">Mercado financeiro</li>
+      <li class="a left" style="--d:.78">Indústria</li>
+      <li class="a left" style="--d:.86">Automóveis</li>
+      <li class="a left" style="--d:.94">Pets</li>
+    </ul>
+  </div>
+  <div class="vword a" style="--d:.5"><span>SEGMENTOS</span></div>
+  <div class="num01 a" style="--d:.4">01</div>
+  <div class="stripes a wipe" style="--d:.8"></div>
+  <div class="text">
+    <div class="row">
+      <span class="vbar a wipe-v" style="--d:.2"></span>
+      <div>
+        <div class="eyebrow a" style="--d:.25">Repertório</div>
+        <h2 class="h2 a" style="--d:.3">Um portfólio que atravessa setores.</h2>
+        <p class="a" style="--d:.45">Quebrar paradigmas, inovar e comunicar para segmentos tão diferentes nos dá uma visão mais ampla do que funciona e de por que funciona.</p>
+        <p class="f">O que deu certo numa clínica pode ser exatamente o que falta para a sua loja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 · CASE ============ -->
+<section class="slide light s-case" data-tone="light" aria-label="Case Doce de Fadas">
+  <div class="grayc a fade"></div>
+  <div class="bigNum a fade" style="--d:.2"><span>02</span></div>
+  <div class="presence a" style="--d:.45"><span class="vbar"></span><div><div class="h3">Prova real</div><p>Do planejamento ao pós-lançamento, executamos cada etapa e acompanhamos cada número.</p></div></div>
+  <div class="screen a" style="--d:.3">
+    <div class="photo"><img src="img/doce-de-fadas.jpg" alt="Confeiteira ao lado de um bolo de renda"><span class="band f wipe"></span></div>
+    <span class="handle">@doce_de_fadas</span>
+  </div>
+  <div class="base a" style="--d:.3"></div>
+  <div class="text">
+    <div class="redline a wipe" style="--d:.1"></div>
+    <div class="eyebrow a" style="--d:.2">Case</div>
+    <h2 class="h2 a" style="--d:.3">Doce de Fadas</h2>
+    <p class="a" style="--d:.45">Lançamento digital do curso Bolos de Renda Renascença: estratégia, conteúdo, tráfego pago e funil de vendas, do planejamento ao pós-lançamento.</p>
+    <div class="result f">
+      <div class="big">6 <em>dígitos</em></div>
+      <span>de faturamento em menos de 7 dias de vendas</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 · CLIENTES ============ -->
+<section class="slide light s-clients" data-tone="light" aria-label="Clientes e marcas">
+  <div class="pad">
+    <div class="intro">
+      <div class="eyebrow a" style="--d:.1">Quem está com a E4T</div>
+      <h2 class="h2 a" style="--d:.2">Marcas que a gente <span class="red">ajudou a construir.</span></h2>
+      <p class="a" style="--d:.35">Na gastronomia desde 2016, quando participamos do lançamento do app Churrascarte. De lá para cá criamos marcas do zero, do nome ao uniforme, da embalagem ao anúncio, e cuidamos da comunicação de quem vive de encher mesa.</p>
+      <div class="also f"><b>Além do local</b>Também produzimos eventos e materiais para multinacionais de tecnologia como Veeam e Checkmarx. O padrão de entrega é o mesmo para qualquer tamanho de cliente.</div>
+    </div>
+    <div class="logos">
+      <div class="logo a" style="--d:.3"><img src="logos/duroc.png" alt="Duroc Experience Food"></div>
+      <div class="logo a" style="--d:.36"><img src="logos/alambrado.png" alt="Alambrado Eventos"></div>
+      <div class="logo a" style="--d:.42"><img src="logos/docedefadas.png" alt="Doce de Fadas"></div>
+      <div class="logo a" style="--d:.48"><img src="logos/butcher.png" alt="Butcher Paper"></div>
+      <div class="logo a" style="--d:.54"><img src="logos/artmill.png" alt="Artmill"></div>
+      <div class="logo a" style="--d:.6"><img src="logos/carloscunha.png" alt="Carlos Cunha"></div>
+      <div class="logo a" style="--d:.66"><img src="logos/tenente.png" alt="Tenente Cozinha Rústica"></div>
+      <div class="logo a" style="--d:.72"><img src="logos/tallita.png" alt="Tállita Machado"></div>
+      <div class="logo a" style="--d:.78"><img src="logos/beeffie.png" alt="Beeffie"></div>
+      <div class="logo a" style="--d:.84"><img src="logos/coalhada.png" alt="Coalhada Artesanal do Silvinho"></div>
+      <div class="logo a" style="--d:.9"><img src="logos/rooftop.png" alt="Rooftop BBQ BR"></div>
+      <div class="logo a" style="--d:.96"><img src="logos/eatburger.png" alt="Eat Burger and Co."></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 · COMPROMISSOS ============ -->
+<section class="slide dark s-promise" data-tone="dark" aria-label="Como trabalhamos">
+  <div class="bg a fade"><img src="img/amigos.jpg" alt=""><span class="band a wipe" style="--d:.5"></span></div>
+  <div class="pad">
+    <div class="eyebrow a" style="--d:.1">Como é trabalhar com a gente</div>
+    <h2 class="h2 a" style="--d:.2">Sem caixa-preta. <span class="red">Sem enrolação.</span></h2>
+    <p class="lead a" style="--d:.35">Agência boa não é a que fala difícil. É a que você entende, confia e consegue cobrar.</p>
+    <div class="promises">
+      <div class="promise f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><div><h4>As contas são suas</h4><p>Contas de anúncio no nome da sua empresa. O histórico e os dados ficam com você.</p></div></div>
+      <div class="promise f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><div><h4>Relatório em língua de dono</h4><p>Quanto investiu, quantos contatos chegaram, quanto custou cada um. Sem sopa de siglas.</p></div></div>
+      <div class="promise f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg><div><h4>Meta antes do primeiro real</h4><p>Combinamos juntos onde queremos chegar e como vamos medir.</p></div></div>
+      <div class="promise f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><div><h4>Acesso direto</h4><p>Você conversa com quem pensa a estratégia, não com um intermediário.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15 · CTA ============ -->
+<section class="slide redbg s-cta" data-tone="red" aria-label="Próximo passo">
+  <div class="stripes a wipe" style="--d:.2"></div>
+  <div class="pad">
+    <div>
+      <div class="eyebrow a" style="--d:.1">Próximo passo</div>
+      <h2 class="h1 a" style="--d:.2"><span class="js-nome-prefix"></span>Vamos começar por um diagnóstico do seu negócio.</h2>
+      <p class="lead a" style="--d:.35">Gratuito e sem compromisso. Olhamos sua presença digital e sua concorrência local e mostramos onde está a oportunidade mais rápida de trazer clientes novos.</p>
+      <div class="ctas a" style="--d:.5">
+        <a class="btn btn-white" id="ctaDiag" href="https://e4tmkt.com/#diagnostico" target="_blank" rel="noopener">Quero meu diagnóstico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" id="ctaWa" href="https://wa.me/5511976661914" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="card a right" style="--d:.45">
+      <span class="label">Como funciona</span>
+      <ol>
+        <li class="f"><div><b>Você conta sobre o negócio</b><span>Algumas perguntas rápidas sobre operação, público e metas.</span></div></li>
+        <li class="f"><div><b>A gente faz o raio-x</b><span>Analisamos você e os concorrentes que disputam o mesmo cliente.</span></div></li>
+        <li class="f"><div><b>Você recebe o caminho</b><span>Por onde começar, quanto investir e o que esperar. Aí você decide.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 16 · OBRIGADO ============ -->
+<section class="slide dark s-end" data-tone="dark" aria-label="Obrigado">
+  <div class="word a" style="--d:.2">E4T</div>
+  <div class="side">
+    <div class="stripes a wipe" style="--d:.4"></div>
+    <div class="txt a" style="--d:.6">Agência de marketing<br>e publicidade</div>
+    <div class="thanks a" style="--d:.8">Obrigado</div>
+    <div class="again a" style="--d:1">
+      <button class="mini" data-go="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Ver de novo</button>
+      <button class="mini js-share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/></svg>Encaminhar para um sócio</button>
+    </div>
+  </div>
+  <div class="foot a" style="--d:1.1">
+    <a href="https://e4tmkt.com" target="_blank" rel="noopener">e4tmkt.com</a>
+    <a href="https://instagram.com/e4tmkt" target="_blank" rel="noopener">@e4tmkt</a>
+    <span>São Paulo · SP</span>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= CONTROLES ================= -->
+<footer class="controls" id="controls">
+  <div class="hint" id="hint">Clique na tela ou use <kbd>→</kbd> <kbd>←</kbd></div>
+  <div class="nav">
+    <button class="cbtn" id="homeBtn" aria-label="Voltar ao início"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></button>
+    <button class="cbtn" id="prevBtn" aria-label="Voltar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+    <span class="counter" id="counter" aria-live="polite"><b>01</b> / 16</span>
+    <button class="cbtn next" id="nextBtn" aria-label="Avançar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+  </div>
+</footer>
+<div class="progress" id="progress"></div>
+<div class="toast" id="toast">Link copiado</div>
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const body = document.body;
+  const slides = $$('.slide');
+  const total = slides.length;
+  const params = new URLSearchParams(location.search);
+  const isPrint = params.has('print');
+  let idx = 0, busy = false;
+
+  /* ---------- personalização: ?para=Nome da Empresa ---------- */
+  const para = (params.get('para') || '').trim().slice(0,60);
+  if (para){
+    $$('.js-nome').forEach(el => el.textContent = para);
+    $('#paraCover').hidden = false;
+    const pre = $('.js-nome-prefix'); if (pre) pre.textContent = para + ', ';
+    document.title = 'E4T | Apresentação para ' + para;
+  }
+
+  /* ---------- modo impressão (gera o PDF) ---------- */
+  if (isPrint){
+    body.classList.add('print');
+    slides.forEach(s => { s.classList.add('active'); s.querySelectorAll('.f').forEach(f => f.classList.add('on')); });
+    $$('[data-count]').forEach(el => el.textContent = el.dataset.count);
+    return;
+  }
+
+  /* ---------- navegação ---------- */
+  const frags = s => [...s.querySelectorAll('.f')];
+  const pad2 = n => String(n).padStart(2,'0');
+
+  function updateUI(){
+    const s = slides[idx];
+    const tone = s.dataset.tone;
+    body.classList.toggle('on-dark', tone === 'dark' || tone === 'red' || tone === 'cover');
+    body.classList.toggle('at-cover', tone === 'cover');
+    body.classList.toggle('brand-ink', s.dataset.brand === 'ink');
+    body.classList.toggle('on-red', tone === 'red');
+    $('#counter').innerHTML = '<b>' + pad2(idx+1) + '</b> / ' + pad2(total);
+    $('#prevBtn').disabled = idx === 0 && frags(s).every(f => !f.classList.contains('on'));
+    $('#homeBtn').disabled = idx === 0;
+    const fr = frags(s), shown = fr.filter(f => f.classList.contains('on')).length;
+    const stepFrac = fr.length ? shown / fr.length : 1;
+    $('#progress').style.width = ((idx + stepFrac) / total * 100) + '%';
+    $('#nextBtn').classList.toggle('pulse', idx === 0);
+    $('#nextBtn').disabled = idx === total-1 && shown === fr.length;
+    syncSteps(s);
+    try{ history.replaceState(null,'',location.pathname + location.search + '#' + (idx+1)); }catch(e){}
+  }
+
+  function syncSteps(s){
+    const st = s.querySelector('#steps'); if (!st) return;
+    const all = st.querySelectorAll('.step'), on = st.querySelectorAll('.step.on').length;
+    st.style.setProperty('--p', all.length ? Math.max(0,(on-1))/(all.length-1) : 0);
+  }
+
+  function countUp(s){
+    s.querySelectorAll('[data-count]').forEach(el => {
+      const end = +el.dataset.count, dur = 1400, t0 = performance.now();
+      const delay = parseFloat(getComputedStyle(el.closest('.a') || el).transitionDelay) * 1000 || 0;
+      el.textContent = '0';
+      setTimeout(() => {
+        const tick = t => {
+          const p = Math.min(1,(t - t0 - delay)/dur);
+          if (p < 0){ requestAnimationFrame(tick); return; }
+          el.textContent = Math.round(end * (1 - Math.pow(1-p,3)));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }, 0);
+    });
+  }
+
+  function go(n, revealAll){
+    n = Math.max(0, Math.min(total-1, n));
+    if (n === idx && slides[idx].classList.contains('active')){ updateUI(); return; }
+    const old = slides[idx];
+    old.classList.remove('active');
+    frags(old).forEach(f => f.classList.remove('on'));
+    idx = n;
+    const s = slides[idx];
+    frags(s).forEach(f => f.classList.toggle('on', !!revealAll));
+    void s.offsetWidth;
+    s.classList.add('active');
+    const p = s.querySelector('.pad, .grid, .content, .scroll'); if (p) p.scrollTop = 0;
+    countUp(s);
+    updateUI();
+    if (idx > 0) $('#hint').classList.add('gone');
+  }
+
+  function next(){
+    const hidden = frags(slides[idx]).filter(f => !f.classList.contains('on'));
+    if (hidden.length){ hidden[0].classList.add('on'); updateUI(); }
+    else if (idx < total-1) go(idx+1);
+  }
+  function prev(){
+    const shown = frags(slides[idx]).filter(f => f.classList.contains('on'));
+    if (shown.length){ shown[shown.length-1].classList.remove('on'); updateUI(); }
+    else if (idx > 0) go(idx-1, true);
+  }
+
+  /* início pelo hash (#5) */
+  const h = parseInt(location.hash.slice(1),10);
+  idx = 0; slides[0].classList.add('active'); countUp(slides[0]);
+  if (h > 1 && h <= total) go(h-1, true); else updateUI();
+
+  /* ---------- eventos ---------- */
+  $('#nextBtn').addEventListener('click', e => { e.stopPropagation(); next(); });
+  $('#prevBtn').addEventListener('click', e => { e.stopPropagation(); prev(); });
+  $('#homeBtn').addEventListener('click', e => { e.stopPropagation(); go(0); });
+  $$('[data-go]').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); go(+b.dataset.go); }));
+
+  const interactive = 'a,button,input,.menu,.topbar,.controls,.tile,.logo';
+  $('#stage').addEventListener('click', e => {
+    if (e.target.closest(interactive)) return;
+    if (menuOpen){ closeMenu(); return; }
+    if (window.getSelection && String(window.getSelection())) return;
+    next();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const k = e.key;
+    if (k === 'Escape' && menuOpen){ closeMenu(); return; }
+    if (['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(k)){ e.preventDefault(); next(); }
+    else if (['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(k)){ e.preventDefault(); prev(); }
+    else if (k === 'Home'){ e.preventDefault(); go(0); }
+    else if (k === 'End'){ e.preventDefault(); go(total-1, true); }
+    else if (k === 'f' || k === 'F'){ toggleFS(); }
+  });
+
+  /* roda do mouse (com trava para não pular vários) */
+  let wheelLock = 0;
+  window.addEventListener('wheel', e => {
+    if (window.innerWidth <= 760) return;
+    if (e.target.closest('.menu')) return;
+    const now = Date.now(); if (now < wheelLock) return;
+    if (Math.abs(e.deltaY) < 24 && Math.abs(e.deltaX) < 24) return;
+    wheelLock = now + 750;
+    (e.deltaY > 0 || e.deltaX > 0) ? next() : prev();
+  }, {passive:true});
+
+  /* swipe no celular */
+  let tx=0, ty=0, tt=0;
+  window.addEventListener('touchstart', e => { const t=e.touches[0]; tx=t.clientX; ty=t.clientY; tt=Date.now(); }, {passive:true});
+  window.addEventListener('touchend', e => {
+    if (e.target.closest('.topbar,.controls,.menu')) return;
+    const t=e.changedTouches[0], dx=t.clientX-tx, dy=t.clientY-ty;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)*1.3 && Date.now()-tt < 800){
+      dx < 0 ? next() : prev();
+    }
+  }, {passive:true});
+
+  /* ---------- barra some quando parado ---------- */
+  let idleT;
+  function wake(){ body.classList.remove('idle'); clearTimeout(idleT); idleT = setTimeout(() => { if (!menuOpen && window.innerWidth > 760) body.classList.add('idle'); }, 3500); }
+  ['mousemove','touchstart','keydown'].forEach(ev => window.addEventListener(ev, wake, {passive:true}));
+  wake();
+
+  /* ---------- tela cheia ---------- */
+  const fsOK = document.fullscreenEnabled || document.webkitFullscreenEnabled;
+  if (!fsOK) $('#fsBtn').style.display = 'none';
+  function toggleFS(){
+    if (!fsOK) return;
+    const d = document;
+    if (!(d.fullscreenElement || d.webkitFullscreenElement)){
+      const el = d.documentElement; (el.requestFullscreen || el.webkitRequestFullscreen).call(el);
+    } else { (d.exitFullscreen || d.webkitExitFullscreen).call(d); }
+  }
+  $('#fsBtn').addEventListener('click', e => { e.stopPropagation(); toggleFS(); });
+
+  /* ---------- compartilhar ---------- */
+  const shareUrl = location.origin + location.pathname + (para ? '?para=' + encodeURIComponent(para) : '');
+  const msg = 'Dá uma olhada nessa apresentação da E4T. São poucos minutos e vale a pena:';
+  $('#shWa').href = 'https://wa.me/?text=' + encodeURIComponent(msg + '\n' + shareUrl);
+  $('#shMail').href = 'mailto:?subject=' + encodeURIComponent('Apresentação E4T Marketing e Publicidade') + '&body=' + encodeURIComponent('Olá,\n\n' + msg + '\n' + shareUrl + '\n\n');
+  $('#shSms').href = 'sms:?&body=' + encodeURIComponent(msg + ' ' + shareUrl);
+  if (navigator.share){ $('#shNative').hidden = false; }
+  $('#shNative').addEventListener('click', () => { navigator.share({title:'E4T Marketing e Publicidade', text:msg, url:shareUrl}).catch(()=>{}); closeMenu(); });
+  $('#shCopy').addEventListener('click', async () => {
+    try{ await navigator.clipboard.writeText(shareUrl); }
+    catch(e){ const t=document.createElement('textarea'); t.value=shareUrl; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+    toast('Link copiado'); closeMenu();
+  });
+
+  const menu = $('#shareMenu'), sb = $('#shareBtn');
+  let menuOpen = false;
+  function openMenu(){ menu.classList.add('open'); $('#topbar').classList.add('menu-open'); sb.setAttribute('aria-expanded','true'); menuOpen = true; }
+  function closeMenu(){ menu.classList.remove('open'); $('#topbar').classList.remove('menu-open'); sb.setAttribute('aria-expanded','false'); menuOpen = false; }
+  sb.addEventListener('click', e => { e.stopPropagation(); menuOpen ? closeMenu() : openMenu(); });
+  $$('.js-share').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); wake(); openMenu(); }));
+  document.addEventListener('click', e => { if (menuOpen && !e.target.closest('.menu,#shareBtn,.js-share')) closeMenu(); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setTimeout(closeMenu, 150)));
+
+  function toast(t){ const el=$('#toast'); el.textContent=t; el.classList.add('show'); setTimeout(()=>el.classList.remove('show'),1800); }
+
+  /* WhatsApp do CTA com mensagem pronta */
+  $('#ctaWa').href = 'https://wa.me/5511976661914?text=' + encodeURIComponent('Olá! Vi a apresentação da E4T' + (para ? ' (' + para + ')' : '') + ' e quero conversar sobre um diagnóstico do meu negócio.');
+
+  /* pré-carrega imagens dos próximos slides */
+  window.addEventListener('load', () => {
+    $$('img').forEach(i => { if (!i.complete) return; const im = new Image(); im.src = i.src; });
+  });
+})();
+</script>
+</body>
+</html>
